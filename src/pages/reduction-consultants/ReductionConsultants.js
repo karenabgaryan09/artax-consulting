@@ -17,20 +17,19 @@ import { useObserver } from "../../hooks/lazy-load/useObserver";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 
+const scrollToContact = ()=>{
+    setTimeout(()=>{
+        const anchorLink = document.createElement('a')
+        anchorLink.href = '#contact'
+        anchorLink.click()
+    },1000)
+}
+
 // HEADER
 function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
 
-    const scrollToContact = ()=>{
-        console.log('clicke')
-        setTimeout(()=>{
-            const anchorLink = document.createElement('a')
 
-            anchorLink.href = '#contact'
-            // document.appendChild(anchorLink)
-            anchorLink.click()
-        },1000)
-    }
 
     return (
         <div
@@ -477,6 +476,9 @@ export default function ReductionConsultants() {
                         />
                         <br />
                         <br />
+                        <Link to="/" onClick={scrollToContact} >
+                        <Button name="Contact Us" variant="contained" size="lg" color="primary" />
+                    </Link>
                     </div>
                 </section>
             </main>
