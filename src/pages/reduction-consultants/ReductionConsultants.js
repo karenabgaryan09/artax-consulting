@@ -1,5 +1,13 @@
 import React, { useEffect } from "react";
-import { Header, Footer, Button, SmallNavbar, CounterOnScroll, SwiperCarousel,ControlledAccordion } from "../../components";
+import {
+    Header,
+    Footer,
+    Button,
+    SmallNavbar,
+    CounterOnScroll,
+    SwiperCarousel,
+    ControlledAccordion,
+} from "../../components";
 import localData from "../../localData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -117,7 +125,7 @@ function CounterBlock({ items, Card, options = {}, rest = {} }) {
                         <div className={`counter-on-scroll text-secondary`}>
                             <h2 className="counter-on-scroll-title">3.8x</h2>
                             <div className="counter-on-scroll-description">
-                            Average uplift from Accelerated Performance Transformation projects
+                                Average uplift from Accelerated Performance Transformation projects
                             </div>
                         </div>
                     </SwiperSlide>
@@ -160,37 +168,36 @@ export default function ReductionConsultants() {
                 <HeaderInner />
             </Header>
             <main className="reduction-consultants-page">
-                <section className="showcase">
-                    <div className="container-md">
-                        <div className="consultants-banner">
-                            <div className="card consultants-card">
-                                <div className="card-icon">{calendar}</div>
-                                <h4 className="card-title">Schedule Your Call</h4>
-                                <p className="card-description">
-                                    In just 15 minutes, we collect essential details about your business, unlocking
-                                    insights on your potential savings.
-                                </p>
-                            </div>
-                            <div className="card consultants-card">
-                                <div className="card-icon">{handshake}</div>
-                                <h4 className="card-title">We Negotiate for You</h4>
-                                <p className="card-description">
-                                    We actively negotiate with your service providers and tax agencies to secure maximum
-                                    savings for you
-                                </p>
-                            </div>
-                            <div className="card consultants-card">
-                                <div className="card-icon">{piggyBank}</div>
-                                <h4 className="card-title">You Save Money</h4>
-                                <p className="card-description">
-                                    Significantly reduce your monthly bills by thousands while maintaining the same
-                                    high-quality service standards.
-                                </p>
-                            </div>
+                <div className="container-md">
+                    <div className="consultants-banner">
+                        <div className="card consultants-card">
+                            <div className="card-icon">{calendar}</div>
+                            <h4 className="card-title">Schedule Your Call</h4>
+                            <p className="card-description">
+                                In just 15 minutes, we collect essential details about your business, unlocking insights
+                                on your potential savings.
+                            </p>
                         </div>
-
+                        <div className="card consultants-card">
+                            <div className="card-icon">{handshake}</div>
+                            <h4 className="card-title">We Negotiate for You</h4>
+                            <p className="card-description">
+                                We actively negotiate with your service providers and tax agencies to secure maximum
+                                savings for you
+                            </p>
+                        </div>
+                        <div className="card consultants-card">
+                            <div className="card-icon">{piggyBank}</div>
+                            <h4 className="card-title">You Save Money</h4>
+                            <p className="card-description">
+                                Significantly reduce your monthly bills by thousands while maintaining the same
+                                high-quality service standards.
+                            </p>
+                        </div>
                     </div>
+                </div>
 
+                <section>
                     <div className="container">
                         <div className="counter">
                             <h3 className="counter-title display-4">impact</h3>
@@ -199,9 +206,40 @@ export default function ReductionConsultants() {
                                 <CounterBlock />
                             </div>
                         </div>
-
                     </div>
+                </section>
 
+                <section className="details">
+                    <div className="container-md">
+                        <div className="wrapper">
+                            <h2 className="details-title display-4">No Payment Until Bills Reduced</h2>
+                            <p className="details-description display-5">
+                                Experience cost-saving convenience with our straightforward pricing model. We share the
+                                savings we generate for you, eliminating upfront costs and driving our dedication to
+                                maximizing your financial benefits.
+                            </p>
+
+                            <h2 className="display-5">50% Of Your New Savings</h2>
+                            <ul>
+                                <li>
+                                    <span className="startIcon">{check}</span>Zero Upfront Costs
+                                </li>
+                                <li>
+                                    <span className="startIcon">{check}</span>No Hidden Charges
+                                </li>
+                                <li>
+                                    <span className="startIcon">{check}</span>Risk-Free Assurance
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="responsive-image">
+                            <img src={consultants5} alt="" />
+                        </div>
+                    </div>
+                </section>
+
+                <section className="showcase">
                     <div className="container-sm">
                         <div
                             className={`showcase-image responsive-image ${consultants2InView ? "lazy-animate" : ""}`}
@@ -368,90 +406,58 @@ export default function ReductionConsultants() {
                         <br />
                         <br />
                         <ControlledAccordion
-                                items={[
-                                    {
-                                        buttonName: "Bill Analysis",
-                                        variant: "text",
-                                        color: "dark",
-                                        content: (
-                                            <p className="description description-text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                                luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                                            </p>
-                                        ),
-                                    },
-                                    {
-                                        buttonName: "Expense Recovery",
-                                        variant: "text",
-                                        color: "dark",
-                                        content: (
-                                            <p className="description description-text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                                luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                                            </p>
-                                        ),
-                                    },
-                                    {
-                                        buttonName: "Rate Verification",
-                                        variant: "text",
-                                        color: "dark",
-                                        content: (
-                                            <p className="description description-text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                                luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                                            </p>
-                                        ),
-                                    },
-                                    {
-                                        buttonName: "Cost Management",
-                                        variant: "text",
-                                        color: "dark",
-                                        content: (
-                                            <p className="description description-text">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                                luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                                            </p>
-                                        ),
-                                    },
-                                 
-                                ]}
-                            />
-                            <br />
-                            <br />
-                    </div>
-                </section>
-
-                <section className="details">
-                    <div className="container-md">
-                        <div className="wrapper">
-                            <h2 className="details-title display-4">No Payment Until Bills Reduced</h2>
-                            <p className="details-description display-5">
-                                Experience cost-saving convenience with our straightforward pricing model. We share the
-                                savings we generate for you, eliminating upfront costs and driving our dedication to
-                                maximizing your financial benefits.
-                            </p>
-
-                            <h2 className="display-5">50% Of Your New Savings</h2>
-                            <ul>
-                                <li>
-                                    <span className="startIcon">{check}</span>Zero Upfront Costs
-                                </li>
-                                <li>
-                                    <span className="startIcon">{check}</span>No Hidden Charges
-                                </li>
-                                <li>
-                                    <span className="startIcon">{check}</span>Risk-Free Assurance
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="responsive-image">
-                            <img src={consultants5} alt="" />
-                        </div>
+                            items={[
+                                {
+                                    buttonName: "Bill Analysis",
+                                    variant: "text",
+                                    color: "dark",
+                                    content: (
+                                        <p className="description description-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                        </p>
+                                    ),
+                                },
+                                {
+                                    buttonName: "Expense Recovery",
+                                    variant: "text",
+                                    color: "dark",
+                                    content: (
+                                        <p className="description description-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                        </p>
+                                    ),
+                                },
+                                {
+                                    buttonName: "Rate Verification",
+                                    variant: "text",
+                                    color: "dark",
+                                    content: (
+                                        <p className="description description-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                        </p>
+                                    ),
+                                },
+                                {
+                                    buttonName: "Cost Management",
+                                    variant: "text",
+                                    color: "dark",
+                                    content: (
+                                        <p className="description description-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                        </p>
+                                    ),
+                                },
+                            ]}
+                        />
+                        <br />
+                        <br />
                     </div>
                 </section>
             </main>
-
 
             <footer className="dark-footer"></footer>
             {/* <Footer /> */}
