@@ -473,7 +473,10 @@ export default function ReductionConsultants() {
                                     color: "dark",
                                     content: (
                                         <p className="description description-text">
-                                            Our Cost Management services are designed to help you optimize your business expenses and achieve greater financial efficiency. With our expert analysis and strategic insights, we identify areas where costs can be reduced, processes can be streamlined, and savings can be realized.
+                                            Our Cost Management services are designed to help you optimize your business
+                                            expenses and achieve greater financial efficiency. With our expert analysis
+                                            and strategic insights, we identify areas where costs can be reduced,
+                                            processes can be streamlined, and savings can be realized.
                                         </p>
                                     ),
                                 },
