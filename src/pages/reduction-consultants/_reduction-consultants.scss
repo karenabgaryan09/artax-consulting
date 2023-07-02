@@ -1,0 +1,215 @@
+.reduction-consultants-page {
+    overflow: visible;
+    position: relative;
+    .showcase {
+        @include mq(576px) {
+            padding-top: 0;
+        }
+    }
+
+    .counter {
+    margin-bottom: 100px;
+
+        &-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 100px;
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 38%;
+                height: 1px;
+                background-color: #d8d8d8;
+                @include mq(992px){
+                    width: 43%;
+
+                }
+            }
+            &:before {
+                left: 0;
+            }
+            &:after {
+                right: 0;
+            }
+        }
+        &-content {
+            // display: flex;
+            
+        }
+    
+        .swiper {
+            padding-bottom: 100px;
+        }
+        .swiper-pagination {
+            
+        }
+        .swiper-pagination-bullet {
+            vertical-align: middle;
+            width: 12px;
+            height: 12px;
+            margin: 0 6px;
+            &:hover:not(.swiper-pagination-bullet-active) {
+                background-color: color(primary);
+            }
+            &-active {
+                width: 15px;
+                height: 15px;
+
+            }
+        }
+        .swiper-pagination {
+            // margin-bottom: -30px;
+        }
+
+      
+      
+    }
+
+    .consultants-banner {
+        display: flex;
+        background-color: #fff;
+        gap: 50px 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        margin-bottom: 70px;
+        @include mq(576px) {
+            margin-bottom: 130px;
+            margin-top: -100px;
+        }
+    }
+
+    .consultants-card {
+        color: color(dark);
+        width: 100%;
+
+        @include mq(576px) {
+            width: calc(100% / 2 - 30px / 2);
+        }
+        @include mq(992px) {
+            width: calc(100% / 3 - (30px * 2) / 3);
+        }
+        .card {
+            &-icon {
+                margin-bottom: 15px;
+                svg {
+                    height: 40px;
+                    path {
+                        fill: color(primary);
+                    }
+                }
+            }
+            &-title {
+                font-size: 22px;
+                font-weight: 500;
+                text-transform: capitalize;
+                position: relative;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 60px;
+                    height: 2px;
+                    background-color: color(primary, 0.5);
+                }
+            }
+            &-description {
+                font-size: 14px;
+                color: color(secondary);
+                font-weight: 300;
+            }
+        }
+    }
+
+    .accordion {
+        &-item {
+            border-bottom: 1px solid #d8d8d8;
+        }
+    }
+
+    .details {
+        background-color: color(dark);
+        color: #fff;
+        background-image: url("../../assets/images/reduction-consultants/consultants-6.jpg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        @include mq(576px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: color(dark, 0.9);
+        }
+        .container-md {
+            position: relative;
+            display: grid;
+            grid-gap: 50px 100px;
+            @include mq(768px) {
+                grid-template-columns: 1.6fr 1fr;
+            }
+        }
+        &-description {
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+            // color: color(primary,.9);
+            // text-shadow: 0 1px 3px rgba(0,0,0,0.8) ;
+        }
+
+        li {
+            display: flex;
+            align-self: center;
+            gap: 10px;
+            // line-height: 1.2;
+            margin-bottom: 10px;
+            // color: rgba(255,255,255,0.7);
+            color: color(primary);
+            // text-shadow: 0 0px 3px rgba(255,255,255,0.8);
+            .startIcon {
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background-color: color(primary);
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            svg {
+                height: 13px;
+                path {
+                    // fill:color(primary,.3);
+                    filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 1));
+                    fill: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+        .responsive-image {
+            padding-top: 130%;
+            border-radius: 10px;
+            @include mq(768px) {
+                margin-top: -100px;
+            }
+            &:after {
+                // display: none;
+                background-color: color(primary, 0.5);
+            }
+        }
+    }
+}

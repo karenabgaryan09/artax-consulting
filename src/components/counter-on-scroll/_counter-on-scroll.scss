@@ -1,0 +1,17 @@
+.counter-on-scroll {
+    // height: 500px;
+    // width: 500px;
+    text-align: center;
+    &-title {
+        font-size: 4.5rem;
+        font-weight: 600;
+        color: color(dark);
+    }
+    &-description {
+        text-align: center;
+        font-size: 17px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+ 
+}

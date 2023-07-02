@@ -1,0 +1,10 @@
+.schedule {
+    &-content {
+       .calendly-inline-widget {
+        // height: 700px;
+        iframe {
+            min-height: 630px;
+        }
+        }
+    }
+}

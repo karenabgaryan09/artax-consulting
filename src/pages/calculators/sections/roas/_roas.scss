@@ -1,0 +1,75 @@
+.roas {
+    padding: 8rem 0;
+    transition:  .3s ease;
+    & > .container {
+        background-image: url('../../../../assets/images/calculators/roas.svg');
+        background-repeat: no-repeat;
+        background-position:bottom left;
+        background-size: 400px;
+    }
+    &-title {
+        text-align: center;
+        display: block !important;
+        color: color(dark);
+        max-width: 635px ;
+        margin: 0 auto;
+        line-height: 1.1;
+        font-size: 1.8rem;
+        margin-bottom: 2rem !important;
+    }
+    .form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .field {
+        background-color: rgba(255,255,255,0.9);
+    }
+    &-btn {
+        width: 100%;
+        border-radius: 15px;
+        padding: 18px 30px;
+        font-size: 1rem;
+        line-height: 1;
+        border-radius: 10rem;
+        margin-bottom: 2rem;
+
+    }
+    #output {
+        height: 30px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr 130px;
+        // align-items: center;
+        border-radius: 10rem;
+        transition: opacity 1s ease,transform .3s ease;
+        &.hidden {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        .field {
+            margin-bottom: 0;
+            border-radius: 0;
+            border-top-left-radius: 10rem;
+            border-bottom-left-radius: 10rem;
+           
+        }
+        .btn {
+            border-radius: 0;
+            border-top-right-radius: 10rem;
+            border-bottom-right-radius: 10rem;
+            
+        }
+    }
+}
+
+@include mq(768px){
+    .calculator {
+        &-title {
+            font-size: 2.5rem;
+            // margin-bottom: 4rem !important;
+        }
+    }
+}

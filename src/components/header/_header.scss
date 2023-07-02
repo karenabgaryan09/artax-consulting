@@ -1,0 +1,108 @@
+.hero {
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: url('../../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 70vh;
+    // margin-bottom: 40px;
+    @include mq(992px){
+        // margin-bottom: 0;
+        min-height: calc(100vh - 70px);
+
+    }
+    & > .container {
+        position: relative;
+        z-index: 1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+    &-title {
+        color: color(light);
+        font-weight: 500;
+        margin: 0 auto;
+        margin-top: -10vh;
+        margin-bottom: 50px;
+        max-width: 1000px;
+        // @include mq(992px){
+        //     max-width: 700px;
+        // }
+        .first-half {
+            display: block;
+            // margin-bottom: 1rem;
+            color: #fff;
+            @media screen and (max-width: 480px){
+                font-size: calc(1.3rem + 3vw);
+            }
+        }
+        .second-half {
+            color: #fff;
+            display: block;
+            text-transform: none;
+            line-height: 1.5;
+        }
+    }
+}
+
+// .scrolling-text {
+//     font-size: 14px;
+//     padding: 10px;
+//     line-height: 1;
+//     font-style: italic;
+// }
+
+
+.hero-sm {
+    min-height: 50vh;
+    background-image: linear-gradient(to left, black 40%, rgba(0, 0, 0, 0.1)),
+        url("../../assets/images/reduction-consultants/consultants.jpg");
+    background-position: left;
+    background-size: auto 100%;
+    @include mq(992px) {
+        min-height: 70vh;
+    }
+    @include mq(1300px) {
+        background-image: linear-gradient(to left, black 50%, rgba(0, 0, 0, 0.1)),
+            url("../../assets/images/reduction-consultants/consultants.jpg");
+    }
+
+    .container {
+        max-width: 1200px;
+        color: #fff;
+        text-align: left;
+        & > .wrapper {
+            margin-top: -100px;
+            max-width: fit-content;
+            @include mq(992px) {
+                margin-left: auto;
+            }
+        }
+    }
+    &-title {
+        text-align: left;
+    }
+    &-description {
+        text-align: left;
+        max-width: 570px;
+        color: #fff;
+        line-height: 1.4;
+        @include mq(992px) {
+            max-width: 800px;
+        }
+        // font-weight: 300 !important;
+        // margin-bottom: 30px;
+    }
+
+
+}
