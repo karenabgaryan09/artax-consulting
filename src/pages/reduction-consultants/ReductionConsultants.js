@@ -29,7 +29,7 @@ function HeaderInner() {
             anchorLink.href = '#contact'
             // document.appendChild(anchorLink)
             anchorLink.click()
-        },3000)
+        },1000)
     }
 
     return (
