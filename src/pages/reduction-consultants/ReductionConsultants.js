@@ -17,19 +17,17 @@ import { useObserver } from "../../hooks/lazy-load/useObserver";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 
-const scrollToContact = ()=>{
-    setTimeout(()=>{
-        const anchorLink = document.createElement('a')
-        anchorLink.href = '#contact'
-        anchorLink.click()
-    },1000)
-}
+const scrollToContact = () => {
+    setTimeout(() => {
+        const anchorLink = document.createElement("a");
+        anchorLink.href = "#contact";
+        anchorLink.click();
+    }, 1000);
+};
 
 // HEADER
 function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
-
-
 
     return (
         <div
@@ -46,10 +44,10 @@ function HeaderInner() {
                 </h2>
                 <div className="btn-group">
                     <Link to="/schedule-a-call">
-                        <Button name="Schedule a FREE Assessment" variant="outlined" size="lg" color="light"  />
+                        <Button name="Schedule a FREE Assessment" variant="outlined" size="lg" color="light" />
                     </Link>
-                    
-                    <Link to="/" onClick={scrollToContact} >
+
+                    <Link to="/" onClick={scrollToContact}>
                         <Button name="Contact Us" variant="contained" size="lg" color="light" />
                     </Link>
                 </div>
@@ -274,7 +272,7 @@ export default function ReductionConsultants() {
                         </div>
 
                         <p className="description-text">
-                            The Artax Consulting stands out as a frontrunner in the cost reduction domain. Our primary
+                            Artax Consulting stands out as a frontrunner in the cost reduction domain. Our primary
                             objective is to assist your company in identifying concealed overcharges within your
                             invoices and exploring all conceivable avenues to minimize your business costs. Our clients
                             enjoy the advantages derived from our unmatched expertise, insider insights, and
@@ -434,8 +432,10 @@ export default function ReductionConsultants() {
                                     color: "dark",
                                     content: (
                                         <p className="description description-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            At Artax Consulting, our specialized bill analysis services go beyond
+                                            surface-level scrutiny. We meticulously examine your bills across various
+                                            expense categories to uncover hidden savings opportunities and maximize your
+                                            bottom line.
                                         </p>
                                     ),
                                 },
@@ -445,8 +445,11 @@ export default function ReductionConsultants() {
                                     color: "dark",
                                     content: (
                                         <p className="description description-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            Our Expense Recovery services are designed to help businesses maximize their
+                                            financial recovery by identifying and recouping overpaid expenses. Our
+                                            dedicated team of experts leverages advanced analytics and industry
+                                            knowledge to uncover discrepancies, billing errors, and duplicate charges
+                                            that may have been overlooked.
                                         </p>
                                     ),
                                 },
@@ -456,8 +459,11 @@ export default function ReductionConsultants() {
                                     color: "dark",
                                     content: (
                                         <p className="description description-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            Our Rate Verification service ensures cost efficiency by validating the
+                                            rates you pay for essential services. We review your contracts, invoices,
+                                            and agreements to ensure that you are being charged accurately based on
+                                            agreed-upon rates. Maximize your cost savings and eliminate unnecessary
+                                            expenses with our expert rate verification.
                                         </p>
                                     ),
                                 },
@@ -467,8 +473,7 @@ export default function ReductionConsultants() {
                                     color: "dark",
                                     content: (
                                         <p className="description description-text">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-                                            luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                                            Our Cost Management services are designed to help you optimize your business expenses and achieve greater financial efficiency. With our expert analysis and strategic insights, we identify areas where costs can be reduced, processes can be streamlined, and savings can be realized.
                                         </p>
                                     ),
                                 },
@@ -476,9 +481,9 @@ export default function ReductionConsultants() {
                         />
                         <br />
                         <br />
-                        <Link to="/" onClick={scrollToContact} >
-                        <Button name="Contact Us" variant="contained" size="lg" color="primary" />
-                    </Link>
+                        <Link to="/" onClick={scrollToContact}>
+                            <Button name="Contact Us" variant="contained" size="lg" color="primary" />
+                        </Link>
                     </div>
                 </section>
             </main>
