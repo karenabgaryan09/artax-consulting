@@ -389,6 +389,17 @@ main {
     padding-top: 50%;
     overflow: hidden;
     margin-bottom: 30px;
+    &-logo {
+        img {
+            height: 50px;
+            width: auto;
+            @include mq(992px){
+                height: 100px;
+    
+            }
+        }
+        display: inline-block;
+    }
     &-content {
         position: absolute;
         width: 100%;
@@ -422,7 +433,7 @@ main {
         // background-color: rgba(0, 0, 0, 0.5);
         background-color: color(primary,.8);
     }
-    img {
+    & > img {
         position: absolute;
         top: 0;
         left: 0;

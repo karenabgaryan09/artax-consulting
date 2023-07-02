@@ -77,6 +77,8 @@
             url("../../assets/images/reduction-consultants/consultants.jpg");
     }
 
+
+
     .container {
         max-width: 1200px;
         color: #fff;
@@ -102,6 +104,12 @@
         }
         // font-weight: 300 !important;
         // margin-bottom: 30px;
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 
 

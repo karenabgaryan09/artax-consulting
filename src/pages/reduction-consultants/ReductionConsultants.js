@@ -21,6 +21,17 @@ import SwiperCore, { Navigation, Pagination } from "swiper";
 function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
 
+    const scrollToContact = ()=>{
+        console.log('clicke')
+        setTimeout(()=>{
+            const anchorLink = document.createElement('a')
+
+            anchorLink.href = '#contact'
+            // document.appendChild(anchorLink)
+            anchorLink.click()
+        },3000)
+    }
+
     return (
         <div
             className={`container ${heroInView ? "lazy-animate" : ""}`}
@@ -34,9 +45,15 @@ function HeaderInner() {
                     Unleash substantial savings every month - No upfront payment required until your monthly bills are
                     drastically reduced
                 </h2>
-                <Link to="/schedule-a-call">
-                    <Button name="Schedule a FREE Assessment" variant="outlined" size="lg" color="light" />
-                </Link>
+                <div className="btn-group">
+                    <Link to="/schedule-a-call">
+                        <Button name="Schedule a FREE Assessment" variant="outlined" size="lg" color="light"  />
+                    </Link>
+                    
+                    <Link to="/" onClick={scrollToContact} >
+                        <Button name="Contact Us" variant="contained" size="lg" color="light" />
+                    </Link>
+                </div>
             </div>
         </div>
     );
@@ -98,7 +115,7 @@ function CounterBlock({ items, Card, options = {}, rest = {} }) {
                         <CounterOnScroll
                             duration={10000}
                             color="primary"
-                            progress={25}
+                            progress={32}
                             description="Total savings found on average"
                         />
                     </SwiperSlide>
@@ -107,14 +124,14 @@ function CounterBlock({ items, Card, options = {}, rest = {} }) {
                         <CounterOnScroll
                             duration={5000}
                             color="primary"
-                            progress={50}
+                            progress={78}
                             description="First-year value achieved"
                         />
                     </SwiperSlide>
 
                     <SwiperSlide>
                         <div className={`counter-on-scroll text-secondary`}>
-                            <h2 className="counter-on-scroll-title">16x</h2>
+                            <h2 className="counter-on-scroll-title">12x</h2>
                             <div className="counter-on-scroll-description">
                                 Average ROI achieved by Accelerated Performance Transformation clients
                             </div>
@@ -123,7 +140,7 @@ function CounterBlock({ items, Card, options = {}, rest = {} }) {
 
                     <SwiperSlide>
                         <div className={`counter-on-scroll text-secondary`}>
-                            <h2 className="counter-on-scroll-title">3.8x</h2>
+                            <h2 className="counter-on-scroll-title">4.9x</h2>
                             <div className="counter-on-scroll-description">
                                 Average uplift from Accelerated Performance Transformation projects
                             </div>
@@ -154,12 +171,12 @@ function CounterBlock({ items, Card, options = {}, rest = {} }) {
 export default function ReductionConsultants() {
     const { pageFade } = useGlobalContext().animations;
     const { calendar, handshake, piggyBank, check } = localData.svgs;
+    const { whiteLogo } = localData.images;
     const { consultants2, consultants3, consultants4, consultants5, consultants6 } = localData.images;
 
     const { ref: consultants2Ref, inView: consultants2InView } = useObserver();
     const { ref: consultants3Ref, inView: consultants3InView } = useObserver();
     const { ref: consultants4Ref, inView: consultants4InView } = useObserver();
-    // const { ref: consultants5Ref, inView: consultants5InView } = useObserver();
 
     return (
         <motion.div {...pageFade}>
@@ -247,13 +264,18 @@ export default function ReductionConsultants() {
                             data-lazy="fade"
                         >
                             <div className="responsive-image-content">
+                                <Link to="/" className="responsive-image-logo">
+                                    <img src={whiteLogo} alt="" />
+                                </Link>
+                                <br />
+                                <br />
                                 <h3 className="responsive-image-text">cost reduction consultants</h3>
                             </div>
                             <img src={consultants2} alt="" />
                         </div>
 
                         <p className="description-text">
-                            The Bottom Line Group stands out as a frontrunner in the cost reduction domain. Our primary
+                            The Artax Consulting stands out as a frontrunner in the cost reduction domain. Our primary
                             objective is to assist your company in identifying concealed overcharges within your
                             invoices and exploring all conceivable avenues to minimize your business costs. Our clients
                             enjoy the advantages derived from our unmatched expertise, insider insights, and
