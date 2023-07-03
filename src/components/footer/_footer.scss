@@ -3,15 +3,29 @@
     background-color: #111;
     color: #fff;
     padding-bottom: 0;
+
     & > .container {
         display: flex;
         flex-direction: column;
+        & > .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+
+            iframe {
+                height: 170px;
+                width: 170px;
+                border: none;
+            }
+        }
     }
     &-brand {
         width: 100%;
         max-width: 200px;
-        margin-bottom: 50px;
         margin-left: auto;
+        display: flex;
+        align-items: center;
     }
     &-content {
         min-height: 200px;

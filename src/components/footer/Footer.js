@@ -11,9 +11,12 @@ export default function Footer() {
     return (
         <motion.footer {...pageFade} className="footer bg-dark">
             <div className="container">
-                <Link to="/" className="footer-brand">
-                    <img src={whiteLogo} alt="" />
-                </Link>
+                <div className="wrapper">
+                <iframe width="360" height="360" src="https://shareables.clutch.co/share/badges/1269855/14434?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Consulting Company Durham 2023"></iframe>
+                    <Link to="/" className="footer-brand">
+                        <img src={whiteLogo} alt="" />
+                    </Link>
+                </div>
                 <div className="footer-content">
                     <div className="quick-links">
                         <h5 className="display-4 quick-links-title">quick links</h5>
