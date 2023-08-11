@@ -27,7 +27,10 @@ const baseUrl = "https://artaxconsulting.com"; // Replace with your actual websi
 const getConvertedData = (data) => {
     const tempData = JSON.parse(data.data.substr(47).slice(0, -2));
     const convertedData = [];
-    tempData.table.rows.forEach((item) => convertedData.push(item.c[0]?.v));
+    tempData.table.rows.forEach((item,index) => {
+        if(index == 0) return
+        convertedData.push(item.c[0]?.v);
+    });
     return convertedData;
 };
 

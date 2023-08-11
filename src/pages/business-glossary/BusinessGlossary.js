@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useGlobalContext } from "../../context";
 import useFetch from "../../hooks/useFetch";
 
-export default function TestPage() {
+export default function BusinessGlossary() {
     const { pageFade } = useGlobalContext().animations;
     const [state, setState] = useState({});
     const { preloader } = localData.images;

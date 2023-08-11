@@ -24,8 +24,8 @@ const Schedule = {
 };
 
 const TestPage = {
-  path: '/test-page/:slug',
-  component: () => import('./src/pages/test-page/TestPage.js')
+  path: '/business-glossary/:slug',
+  component: () => import('./src/pages/business-glossary/TestPage.js')
 };
 
 const routes = [
