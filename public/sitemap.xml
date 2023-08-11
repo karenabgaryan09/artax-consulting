@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://artaxconsulting.com/</loc>
-  <lastmod>2023-07-02T14:40:35+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://artaxconsulting.com/</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/calculators</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/cost-reduction-consultants</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/schedule-a-call</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/test-page/cats</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/test-page/dogs</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/test-page/mouses</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/test-page/monkeys</loc>
+  </url>
+  <url>
+    <loc>https://artaxconsulting.com/test-page/lions</loc>
+  </url>
 </urlset>
