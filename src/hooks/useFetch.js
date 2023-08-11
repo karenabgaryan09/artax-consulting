@@ -60,6 +60,7 @@ export default function useFetch() {
         // const spreadsheetId = "1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0";
         // const range = "testing";
         // const url = urls.spreadsheets + "/v4/spreadsheets/" + spreadsheetId + "/values/" + range;
+        // const url = 'https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?'
         const url = 'https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?'
         return await request({ url, method: "GET", cb });
     };

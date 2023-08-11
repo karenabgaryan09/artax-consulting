@@ -14,7 +14,8 @@ export default function TestPage() {
     const params = useParams();
 
     useEffect(() => {
-        document.title = state.documentTitle || 'Global Management Consulting | Artax';
+        document.title = state.metaTitle || 'Global Management Consulting | Artax';
+        document.description = state.metaDescription || 'Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.'
     }, [state]);
 
     const { getPosts } = useFetch();
@@ -23,10 +24,10 @@ export default function TestPage() {
         const convertedData = {}
         data.table.rows.forEach((item,index)=>{
             const obj = {}
-            obj.documentTitle = item.c[1]?.v
-            obj.title = item.c[2]?.v
-            obj.description = item.c[3]?.v
-            obj.number = item.c[4]?.v
+            obj.metaTitle = item.c[1]?.v
+            obj.metaDescription = item.c[2]?.v
+            obj.h1 = item.c[5]?.v
+            obj.paragraph = item.c[6]?.v
             convertedData[item.c[0]?.v.toLowerCase()] = obj
         })
         setState(convertedData[params.slug])
@@ -53,11 +54,10 @@ export default function TestPage() {
                     <div className="container">
                         <div className="schedule-content">
                             {/* <img src={state.cover ? state.cover : preloader } alt=""  /> */}
-                            {state.title ? (
+                            {state.h1 ? (
                                 <>
-                                    <h1 className="display-3">{state.title}</h1>
-                                    <p className="description">{state.description}</p>
-                                    <p className="description">{state.number || 'null'}</p>
+                                    <h1 className="display-3">{state.h1}</h1>
+                                    <p className="description">{state.paragraph || 'null'}</p>
                                 </>
                             ) : (
                                 "loading..."
