@@ -20,17 +20,15 @@ export default function TestPage() {
     const { getPosts, getProducts } = useFetch();
 
     const getConvertedData = (data)=>{
-        const convertedData = []
+        const convertedData = {}
         data.table.rows.forEach((item,index)=>{
             const obj = {}
-            obj.title = item.c[0]?.v
-            obj.description = item.c[1]?.v
-            obj.number = item.c[2]?.v
-            convertedData.push(obj)
+            obj.title = item.c[1]?.v
+            obj.description = item.c[2]?.v
+            obj.number = item.c[3]?.v
+            convertedData[item.c[0]?.v.toLowerCase()] = obj
         })
-        // console.log(convertedData)
-        // console.log(convertedData[params.id])
-        setState(convertedData[params.id])
+        setState(convertedData[params.slug])
     }
 
     useEffect(() => {

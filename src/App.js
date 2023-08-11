@@ -27,7 +27,7 @@ export default function App() {
                     <Route path="/calculators" element={<Calculators />} />
                     <Route path="/cost-reduction-consultants" element={<ReductionConsultants />} />
                     <Route path="/schedule-a-call" element={<Schedule />} />
-                    <Route path="/test-page/:id" element={<TestPage />} />
+                    <Route path="/test-page/:slug" element={<TestPage />} />
 
                     <Route path="*" element={<Error />} />
                 </Routes>
