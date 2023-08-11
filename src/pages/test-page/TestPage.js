@@ -13,24 +13,38 @@ export default function TestPage() {
 
     const params = useParams();
 
-    useEffect(() => {
-        console.log(params.id, " id");
-    }, []);
+    // useEffect(() => {
+        // console.log(params.id, " id");
+    // }, []);
 
     const { getPosts, getProducts } = useFetch();
 
+    const getConvertedData = (data)=>{
+        const convertedData = []
+        data.table.rows.forEach((item,index)=>{
+            const obj = {}
+            obj.title = item.c[0]?.v
+            obj.description = item.c[1]?.v
+            obj.number = item.c[2]?.v
+            convertedData.push(obj)
+        })
+        // console.log(convertedData)
+        // console.log(convertedData[params.id])
+        setState(convertedData[params.id])
+    }
+
     useEffect(() => {
-        getProducts((err, data) => {
-            setTimeout(() => {
-                getPosts((err, data) => {
-                    setState({ ...state, title: data[params.id].title, description: data[0].body });
-                });
-            }, 1000);
+        getPosts((err, data) => {
+
+            const tempData = JSON.parse(data.substr(47).slice(0,-2))
+            console.log(tempData)
+            // setState({ ...state, title: data[params.id].title, description: data[0].body });
+          getConvertedData(tempData)
         });
     }, []);
 
     useEffect(() => {
-        console.log(state);
+        // console.log(state);
     }, [state]);
 
     return (
@@ -45,9 +59,10 @@ export default function TestPage() {
                                 <>
                                     <h1 className="display-3">{state.title}</h1>
                                     <p className="description">{state.description}</p>
+                                    <p className="description">{state.number || 'null'}</p>
                                 </>
                             ) : (
-                                "parameter should be number"
+                                "loading..."
                             )}
                         </div>
                     </div>

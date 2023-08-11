@@ -4,6 +4,7 @@ import axios from "axios";
 const urls = {
     jsonPlaceholder: "https://jsonplaceholder.typicode.com", //http://localhost:3001
     chatGPT: "https://api.openai.com",
+    spreadsheets: "https://sheets.googleapis.com",
 };
 
 export default function useFetch() {
@@ -56,10 +57,12 @@ export default function useFetch() {
         return await request({ url, method: "GET", cb });
     };
     const getPosts = async (cb) => {
-        const url = urls.jsonPlaceholder + "/posts";
+        // const spreadsheetId = "1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0";
+        // const range = "testing";
+        // const url = urls.spreadsheets + "/v4/spreadsheets/" + spreadsheetId + "/values/" + range;
+        const url = 'https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?'
         return await request({ url, method: "GET", cb });
     };
-
 
     const clearError = () => setError(null);
 
