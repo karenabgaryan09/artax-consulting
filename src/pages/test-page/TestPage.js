@@ -13,19 +13,20 @@ export default function TestPage() {
 
     const params = useParams();
 
-    // useEffect(() => {
-        // console.log(params.id, " id");
-    // }, []);
+    useEffect(() => {
+        document.title = state.documentTitle || 'Global Management Consulting | Artax';
+    }, [state]);
 
-    const { getPosts, getProducts } = useFetch();
+    const { getPosts } = useFetch();
 
     const getConvertedData = (data)=>{
         const convertedData = {}
         data.table.rows.forEach((item,index)=>{
             const obj = {}
-            obj.title = item.c[1]?.v
-            obj.description = item.c[2]?.v
-            obj.number = item.c[3]?.v
+            obj.documentTitle = item.c[1]?.v
+            obj.title = item.c[2]?.v
+            obj.description = item.c[3]?.v
+            obj.number = item.c[4]?.v
             convertedData[item.c[0]?.v.toLowerCase()] = obj
         })
         setState(convertedData[params.slug])
@@ -33,7 +34,6 @@ export default function TestPage() {
 
     useEffect(() => {
         getPosts((err, data) => {
-
             const tempData = JSON.parse(data.substr(47).slice(0,-2))
             console.log(tempData)
             // setState({ ...state, title: data[params.id].title, description: data[0].body });
@@ -42,7 +42,7 @@ export default function TestPage() {
     }, []);
 
     useEffect(() => {
-        // console.log(state);
+        console.log(state);
     }, [state]);
 
     return (
