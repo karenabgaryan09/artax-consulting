@@ -43,7 +43,7 @@ export default function Footer() {
                                 Calculators
                             </Link>
                             <Link to="/business-glossary" className="quick-links-link solid-link">
-                                Calculators Glossary
+                                Glossary
                             </Link>
                         </ul>
                     </div>
