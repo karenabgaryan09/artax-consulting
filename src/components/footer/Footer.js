@@ -12,7 +12,12 @@ export default function Footer() {
         <motion.footer {...pageFade} className="footer bg-dark">
             <div className="container">
                 <div className="wrapper">
-                <iframe width="360" height="360" src="https://shareables.clutch.co/share/badges/1269855/14434?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Consulting Company Durham 2023"></iframe>
+                    <iframe
+                        width="360"
+                        height="360"
+                        src="https://shareables.clutch.co/share/badges/1269855/14434?utm_source=clutch_top_company_badge&utm_medium=image_embed"
+                        title="Top Clutch Consulting Company Durham 2023"
+                    ></iframe>
                     <Link to="/" className="footer-brand">
                         <img src={whiteLogo} alt="" />
                     </Link>
@@ -37,6 +42,9 @@ export default function Footer() {
                             <Link to="/calculators" className="quick-links-link solid-link">
                                 Calculators
                             </Link>
+                            <Link to="/business-glossary" className="quick-links-link solid-link">
+                                Calculators Glossary
+                            </Link>
                         </ul>
                     </div>
 
@@ -51,11 +59,7 @@ export default function Footer() {
                         <a href="#/" className="solid-link" target="_blank">
                             {facebook}
                         </a>
-                        <a
-                            href="https://twitter.com/ArtaxConsulting"
-                            className="solid-link"
-                            target="_blank"
-                        >
+                        <a href="https://twitter.com/ArtaxConsulting" className="solid-link" target="_blank">
                             {twitter}
                         </a>
                     </div>
