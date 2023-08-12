@@ -12,6 +12,7 @@ export {default as SwiperCarousel} from './swiper-carousel/SwiperCarousel.js'
 export {default as Checkbox} from './checkbox/Checkbox.js'
 export {default as Modal} from './modal/Modal.js'
 export {default as CounterOnScroll} from './counter-on-scroll/CounterOnScroll.js'
+export {default as Skeleton} from './skeleton/Skeleton.js'
 
 // CARDS
 export {default as OurPeopleCard} from './cards/our-people-card/OurPeopleCard.js'

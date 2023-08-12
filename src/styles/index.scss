@@ -18,6 +18,7 @@
 @import '../components/swiper-carousel/swiper-carousel';
 @import '../components/modal/modal';
 @import '../components/counter-on-scroll/counter-on-scroll';
+@import '../components/skeleton/skeleton';
 
 // PAGES
 @import '../pages/home/home';
@@ -26,6 +27,8 @@
 @import '../pages/calculators/calculators';
 @import '../pages/reduction-consultants/reduction-consultants';
 @import '../pages/schedule/schedule';
+@import '../pages/business-glossary/business-glossary';
+@import '../pages/single-business-glossary/single-business-glossary';
 
 // CALCULATOR SECTIONS
 @import '../pages/calculators/sections/seo/seo';

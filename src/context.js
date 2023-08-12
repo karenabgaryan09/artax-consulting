@@ -1,7 +1,8 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import localData from "./localData";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import useFetch from "./hooks/useFetch";
 export const Context = createContext();
 
 export default function Provider({ children }) {
@@ -27,6 +28,7 @@ export default function Provider({ children }) {
         },
     });
 
+    // ALERT
     const notify = () => toast("Wow so easy!");
     // const notify = () => {
     //     toast("Default Notification !");
@@ -52,6 +54,7 @@ export default function Provider({ children }) {
     const errorAlert = (message = "error") => {
         toast.error(message);
     };
+    // SEND/RECEIVE MESSAGE
     const [isMessageSending, setIsMessageSending] = useState(false);
     const sendMessageToAdmin = (
         form,
@@ -90,6 +93,31 @@ export default function Provider({ children }) {
         );
     };
 
+    // BUSINESS GLOSSARY DATA
+    const [businessGlossaryData,setBusinessGlossaryData] = useState({})
+    const { getPosts } = useFetch();
+
+    const getConvertedData = (data) => {
+        const convertedData = {};
+        data.table.rows.forEach((item, index) => {
+            const obj = {};
+            obj.metaTitle = item.c[1]?.v;
+            obj.metaDescription = item.c[2]?.v;
+            obj.h1 = item.c[5]?.v;
+            obj.paragraph = item.c[6]?.v;
+            convertedData[item.c[0]?.v.toLowerCase()] = obj;
+        });
+        return convertedData
+    };
+
+    useEffect(() => {
+        getPosts((err, data) => {
+            const tempData = JSON.parse(data.substr(47).slice(0, -2));
+            const convertedData =  getConvertedData(tempData);
+            setBusinessGlossaryData(convertedData);
+        });
+    }, []);
+
     return (
         <Context.Provider
             value={{
@@ -101,7 +129,8 @@ export default function Provider({ children }) {
                 errorAlert,
                 sendMessageToAdmin,
                 isMessageSending,
-                isMessageSendingToUser
+                isMessageSendingToUser,
+                businessGlossaryData
             }}
         >
             {children}
