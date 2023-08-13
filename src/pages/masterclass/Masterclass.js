@@ -35,6 +35,7 @@ function HeaderInner() {
                         color="primary"
                         name="get in touch"
                         size="lg"
+                        className="hero-btn"
                         onClick={() => {
                             setTimeout(() => {
                                 const a = document.createElement("a");
@@ -90,7 +91,7 @@ export default function Masterclass() {
                         </p>
                         <br />
                         <br />
-                        
+
                         <h5 className="display-5">THE COVID PANDEMIC</h5>
 
                         <div className="showcase-description text-1">
