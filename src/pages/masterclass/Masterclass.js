@@ -9,6 +9,7 @@ import { useObserver } from "../../hooks/lazy-load/useObserver";
 // HEADER
 function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
+    const {jp} = localData.images
 
     return (
         <div className="hero-inner">
@@ -18,6 +19,7 @@ function HeaderInner() {
                 ref={blockRef}
                 // style={{ transitionDelay: (300 || 1 * 0.1) + "s" }}
             >
+                {/* <img src={jp} width={300} alt="" /> */}
                 <h1 className="hero-title display-3">Jonathan Poston M.E.</h1>
                 <h2 className="hero-description">
                     Jonathan Poston, M.E. has worked with Fortune brands as a consultant providing strategic guidance on
