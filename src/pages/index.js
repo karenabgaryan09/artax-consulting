@@ -6,3 +6,4 @@ export {default as ReductionConsultants} from './reduction-consultants/Reduction
 export {default as Schedule} from './schedule/Schedule.js'
 export {default as BusinessGlossary} from './business-glossary/BusinessGlossary.js'
 export {default as SingleBusinessGlossary} from './single-business-glossary/SingleBusinessGlossary.js'
+export {default as Masterclass} from './masterclass/Masterclass.js'

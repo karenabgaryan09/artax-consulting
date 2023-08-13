@@ -23,19 +23,21 @@ function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
 
     return (
-        <div
-            className={`container ${heroInView ? "lazy-animate" : ""}`}
-            data-lazy="fade-up"
-            ref={blockRef}
-            // style={{ transitionDelay: (300 || 1 * 0.1) + "s" }}
-        >
-            <h1 className="hero-title">
-                <span className="first-half display-2">Strategic Guidance </span>
-                <span className="second-half display-4">For The Age of Digital Transformation</span>
-            </h1>
-            <a href="#contact">
-                <Button variant="outlined" color="light" name="get in touch" size="lg" />
-            </a>
+        <div className="hero-inner" ref={blockRef}>
+            <div
+                className={`container ${heroInView ? "lazy-animate" : ""}`}
+                data-lazy="fade-up"
+                
+                // style={{ transitionDelay: (300 || 1 * 0.1) + "s" }}
+            >
+                <h1 className="hero-title">
+                    <span className="first-half display-2">Strategic Guidance </span>
+                    <span className="second-half display-4">For The Age of Digital Transformation</span>
+                </h1>
+                <a href="#contact">
+                    <Button variant="outlined" color="light" name="get in touch" size="lg" />
+                </a>
+            </div>
         </div>
     );
 }
@@ -419,9 +421,9 @@ export default function Home() {
     }, []);
     return (
         <motion.div {...pageFade}>
-            <Navbar />
             <Header title="home">
-                <HeaderInner/>
+                <Navbar />
+                <HeaderInner />
             </Header>
             <main className="home-page">
                 <InfoSection />

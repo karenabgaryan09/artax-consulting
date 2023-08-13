@@ -1,33 +1,43 @@
 .hero {
-    background-color: rgba(0,0,0,0.1);
+    // background-color: rgba(0,0,0,0.1);
     display: flex;
-    align-items: center;
-    text-align: center;
-    background-image: url('../../assets/images/background.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+    flex-direction: column;
+
     min-height: 70vh;
     // margin-bottom: 40px;
     @include mq(992px){
         // margin-bottom: 0;
-        min-height: calc(100vh - 70px);
+        min-height:100vh;
 
     }
-    & > .container {
+    &-inner {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        align-items: center;
+        text-align: center;
+        background-image: url('../../assets/images/background.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 70px 0;
         position: relative;
-        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        & > .container {
+            position: relative;
+            z-index: 2;
+        }
     }
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.4);
-    }
+
     &-title {
         color: color(light);
         font-weight: 500;

@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Home, PrivacyPolicy, Error, Calculators, Schedule, ReductionConsultants, BusinessGlossary,SingleBusinessGlossary } from "./pages";
+import {
+    Home,
+    PrivacyPolicy,
+    Error,
+    Calculators,
+    Schedule,
+    ReductionConsultants,
+    BusinessGlossary,
+    SingleBusinessGlossary,
+    Masterclass
+} from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
@@ -19,7 +29,7 @@ export default function App() {
 
     return (
         <>
-           <ToastContainer autoClose={3000} />
+            <ToastContainer autoClose={3000} />
             <AnimatePresence exitBeforeEnter>
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home />} />
@@ -27,6 +37,7 @@ export default function App() {
                     <Route path="/calculators" element={<Calculators />} />
                     <Route path="/cost-reduction-consultants" element={<ReductionConsultants />} />
                     <Route path="/schedule-a-call" element={<Schedule />} />
+                    <Route path="/consultants/jonathan-poston/" element={<Masterclass />} />
                     <Route path="/business-glossary" element={<BusinessGlossary />} />
                     <Route path="/business-glossary/:slug" element={<SingleBusinessGlossary />} />
 
