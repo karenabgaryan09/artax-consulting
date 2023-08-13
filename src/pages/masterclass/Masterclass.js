@@ -65,7 +65,7 @@ export default function Masterclass() {
                 <SmallNavbar />
                 <HeaderInner />
             </Header>
-            <main className="masterclass-page">
+            {/* <main className="masterclass-page">
                 <section className="showcase">
                     <div className="container-sm">
                         <h2 className="showcase-title display-4">EXPEDITION CRUISING – GOLDMINE OR BUBBLE? PART 2</h2>
@@ -120,8 +120,8 @@ export default function Masterclass() {
                         </div>
                     </div>
                 </section>
-            </main>
-            <footer className="dark-footer"></footer>
+            </main> */}
+            {/* <footer className="dark-footer"></footer> */}
             {/* <Footer /> */}
         </motion.div>
     );

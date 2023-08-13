@@ -1,5 +1,6 @@
 .hero-masterclass {
     // min-height: 70vh !important;
+    min-height: 100vh;
     .small-navbar {
         background-color: #000;
     }
@@ -10,19 +11,24 @@
             align-items: flex-end;
             background-image: none;
             background-color: #000;
-            @include mq(768px){
-                background-image: url("../../assets/images/masterclass-cover.jpg");
-            }
+            background-image: url("../../assets/images/masterclass-cover.jpg");
             &:after {
-                // display: none;
-                // background-color: rgba(0,0,0,.5);
-                background: linear-gradient(
-                        to top,
-                        rgba(0, 0, 0, 1) 0,
-                        rgba(0, 0, 0, 0.6) 25%,
-                        rgba(0, 0, 0, 0) 45%
-                    )
-                    center no-repeat !important;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            @include mq(768px){
+                &:after {
+                    // display: none;
+                    // background-color: rgba(0,0,0,.5);
+                    background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 1) 0,
+                            rgba(0, 0, 0, 0.6) 25%,
+                            rgba(0, 0, 0, 0) 45%
+                        )
+                        center no-repeat !important;
+                }
+            }
+            & > .container {
             }
         }
 
@@ -32,7 +38,7 @@
             max-width: 400px;
             padding-bottom: 10px;
             margin-top: 0 !important;
-            text-shadow: 0 0 30px rgba(0,0,0,0.7);
+            text-shadow: 0 0 0px rgba(0,0,0,0.7);
             font-weight: bold;
             text-transform: uppercase;
             &:after {
