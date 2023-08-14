@@ -9,7 +9,8 @@ import {
     ReductionConsultants,
     BusinessGlossary,
     SingleBusinessGlossary,
-    Masterclass
+    Masterclass,
+    PakistanPharmacyIndustry
 } from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -37,7 +38,8 @@ export default function App() {
                     <Route path="/calculators" element={<Calculators />} />
                     <Route path="/cost-reduction-consultants" element={<ReductionConsultants />} />
                     <Route path="/schedule-a-call" element={<Schedule />} />
-                    <Route path="/consultants/jonathan-poston/" element={<Masterclass />} />
+                    <Route path="/consultants/jonathan-poston" element={<Masterclass />} />
+                    <Route path="/articles/pakistan-pharmacy-industry" element={<PakistanPharmacyIndustry />} />
                     <Route path="/business-glossary" element={<BusinessGlossary />} />
                     <Route path="/business-glossary/:slug" element={<SingleBusinessGlossary />} />
 
