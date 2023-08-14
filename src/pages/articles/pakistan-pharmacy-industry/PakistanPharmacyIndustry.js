@@ -13,6 +13,7 @@ function HeaderInner() {
 export default function PakistanPharmacyIndustry() {
     const { pageFade } = useGlobalContext().animations;
     const { jp } = localData.images;
+    
 
     useEffect(() => {
         document.title = "Pakistan Pharmaceutical Industry Outlook";
@@ -29,7 +30,7 @@ export default function PakistanPharmacyIndustry() {
                     <div className="container-sm">
                         <h1 className="showcase-title display-4">Pakistan Pharmacy Business Guide</h1>
                         <br />
-                        
+
                         {/* <img className="showcase-image" src={jp} alt="" />
                         <br />
 
