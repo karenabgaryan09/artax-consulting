@@ -9,7 +9,7 @@ import { useObserver } from "../../hooks/lazy-load/useObserver";
 // HEADER INNER
 function HeaderInner() {
     const { ref: blockRef, inView: heroInView } = useObserver();
-    const {jp} = localData.images
+    const { jp } = localData.images;
 
     return (
         <div className="hero-inner">
@@ -23,7 +23,7 @@ function HeaderInner() {
                 <h1 className="hero-title display-3">Jonathan Poston M.E.</h1>
                 <h2 className="hero-description">
                     Jonathan Poston, M.E. has worked with Fortune brands as a consultant providing strategic guidance on
-                    digital transformation, digital strategy, solving complex business problems,etc.
+                    digital transformation, digital strategy, and solving complex business problems.
                     <br />
                     <br />
                     Poston has also delivered courses related to business, digital strategy, and international trade, as
