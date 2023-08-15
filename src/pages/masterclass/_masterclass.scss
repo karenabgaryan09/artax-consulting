@@ -16,22 +16,26 @@
             background-size: 670px;
             background-position: top;
             &:after {
-                background-color: rgba(0, 0, 0, 0.8);
+                background-color: rgba(0,0,0,.5);
+                // background-color: rgba(0, 0, 0, 0.8);
             }
-            @include mq(768px){
-                &:after {
-                    // display: none;
-                    background-color: rgba(0,0,0,.6);
-                    // background: linear-gradient(
-                    //         to top,
-                    //         rgba(0, 0, 0, 1) 0,
-                    //         rgba(0, 0, 0, 0.6) 25%,
-                    //         rgba(0, 0, 0, 0) 45%
-                    //     )
-                    //     center no-repeat !important;
-                }
-            }
+            // @include mq(768px){
+            //     &:after {
+            //         // display: none;
+            //         // background: linear-gradient(
+            //         //         to top,
+            //         //         rgba(0, 0, 0, 1) 0,
+            //         //         rgba(0, 0, 0, 0.6) 25%,
+            //         //         rgba(0, 0, 0, 0) 45%
+            //         //     )
+            //         //     center no-repeat !important;
+            //     }
+            // }
             & > .container {
+                margin-top: 230px;
+                @include mq(768px){
+                    margin-top: 0;
+                }
             }
         }
 
