@@ -303,7 +303,7 @@ export default function PakistanPharmacyIndustry() {
                         <br />
                         <br />
 
-                        <h2 className="display-5">BIO</h2>
+                        <h2 className="display-5"> Author bio</h2>
                         <p className="showcase-description text-1">
                             Muhammad S. Ali, PharmD (Punjab University, College of Pharmacy) currently works at Dozz
                             Pharmacy and Medlite Pharmacy in Lahore Pakistan.{" "}
