@@ -20,8 +20,9 @@ const images = {
     consultants4: require("./assets/images/reduction-consultants/consultants-4.jpg"),
     consultants5: require("./assets/images/reduction-consultants/consultants-5.jpg"),
     consultants6: require("./assets/images/reduction-consultants/consultants-6.jpg"),
-    jp: require("./assets/images/jp.webp"),
     preloader: require("./assets/images/icons/preloader.gif"),
+    jp: require("./assets/images/jp.webp"),
+    ms: require("./assets/images/ms.webp"),
 
     // pattern: require("./assets/images/pattern.png"),
 };
