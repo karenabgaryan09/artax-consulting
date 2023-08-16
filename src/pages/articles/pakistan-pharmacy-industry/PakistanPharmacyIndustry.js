@@ -30,17 +30,6 @@ export default function PakistanPharmacyIndustry() {
                         <h1 className="showcase-title display-4">Pakistan Pharmacy Business Guide</h1>
                         <br />
 
-                        <img
-                            className="showcase-image"
-                            src={ms}
-                            alt="Dr. Muhammad S. Ali (Pharmacist, Lahore Pakistan)"
-                        />
-                        <br />
-
-                        <em>Dr. Muhammad S. Ali (Pharmacist, Lahore Pakistan)</em>
-                        <br />
-                        <br />
-                        <br />
 
                         <p className="showcase-description text-1">
                             According to a{" "}
@@ -322,6 +311,19 @@ export default function PakistanPharmacyIndustry() {
                         <br />
 
                         <hr />
+                        <br />
+                        <br />
+
+                        
+                        <img
+                            className="showcase-image"
+                            src={ms}
+                            alt="Dr. Muhammad S. Ali (Pharmacist, Lahore Pakistan)"
+                        />
+                        <br />
+
+                        <em>By Dr. Muhammad S. Ali (Pharmacist, Lahore Pakistan)</em>
+                        <br />
                         <br />
                         <br />
                     </div>
