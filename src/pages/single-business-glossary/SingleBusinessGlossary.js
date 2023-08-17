@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Header, Footer, Button, SmallNavbar } from "../../components";
 import localData from "../../localData";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useGlobalContext } from "../../context";
 
@@ -12,10 +12,14 @@ export default function SingleBusinessGlossary() {
     const { preloader } = localData.images;
 
     const params = useParams();
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (Object.keys(businessGlossaryData).length === 0) return;
-        setState(businessGlossaryData[params.slug]);
+        setState(businessGlossaryData[params.slug] || {});
+        const slug = businessGlossaryData[params.slug]
+        if(slug) return 
+        navigate('/business-glossary')
     }, [businessGlossaryData]);
 
     useEffect(() => {
