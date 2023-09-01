@@ -4,19 +4,45 @@ import localData from "../../../localData";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useGlobalContext } from "../../../context";
+import useJsonLd from "../../../hooks/useJsonLd";
 
 // HEADER INNER
 // function HeaderInner() {
 //     return <div className="hero-inner"></div>;
 // }
 
+const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://artaxconsulting.com/expert-advice/pakistan-pharmacy-industry",
+    },
+    headline: "Pakistan Pharmacy Business Guide",
+    image: "",
+    author: {
+        "@type": "Person",
+        name: "Muhammad S. Ali, PharmD",
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "",
+        logo: {
+            "@type": "ImageObject",
+            url: "",
+        },
+    },
+    datePublished: "2023-08-16",
+};
 export default function PakistanPharmacyIndustry() {
     const { pageFade } = useGlobalContext().animations;
     const { ms } = localData.images;
+    useJsonLd(jsonLdData);
 
     useEffect(() => {
         document.title = "Pakistan Pharmaceutical Industry Outlook";
     }, []);
+    
 
     const [isBioHidden, setIsBioHidden] = useState(true);
 
@@ -31,12 +57,10 @@ export default function PakistanPharmacyIndustry() {
                     <div className="container-sm">
                         <h1 className="showcase-title">Pakistan Pharmacy Business Guide</h1>
 
-                        
-
                         <em>Written by Muhammad S. Ali, PharmD</em>
-                        <br/>
-                        <p style={{fontSize: '16px'}}> Last updated: Aug 16, 2023 • 8 min read</p>
-                        
+                        <br />
+                        <p style={{ fontSize: "16px" }}> Last updated: Aug 16, 2023 • 8 min read</p>
+
                         <br />
 
                         <p className="showcase-description">
@@ -335,7 +359,6 @@ export default function PakistanPharmacyIndustry() {
                             />
                             <br />
                             <br />
-                                    
                             <span className={`${isBioHidden ? "hidden" : ""}`}>
                                 That’s why Bankrate’s experts rated and reviewed over 250 cards of the top
                                 card offers on the market to create our list of the best credit cards of 2023.
@@ -351,7 +374,7 @@ export default function PakistanPharmacyIndustry() {
                                 intro APR or a reliable way to build credit, one of these cards from our
                                 partners should be a great fit.
                                 <Button
-                                style={{marginTop: '10px'}}
+                                    style={{ marginTop: "10px" }}
                                     name="show less"
                                     onClick={() => setIsBioHidden(true)}
                                 />
