@@ -33,9 +33,9 @@ export default function PakistanPharmacyIndustry() {
 
                         
 
-                        <em>Written by Artax Consulting</em>
+                        <em>Written by Muhammad S. Ali, PharmD</em>
                         <br/>
-                        <p style={{fontSize: '16px'}}> Last updated: Sep 1, 2023 • 8 min read</p>
+                        <p style={{fontSize: '16px'}}> Last updated: Aug 16, 2023 • 8 min read</p>
                         
                         <br />
 
