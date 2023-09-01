@@ -30,6 +30,13 @@ export default function PakistanPharmacyIndustry() {
                 <section className="showcase">
                     <div className="container-sm">
                         <h1 className="showcase-title">Pakistan Pharmacy Business Guide</h1>
+
+                        
+
+                        <em>Written by Artax Consulting</em>
+                        <br/>
+                        <p style={{fontSize: '16px'}}> Last updated: Sep 1, 2023 • 8 min read</p>
+                        
                         <br />
 
                         <p className="showcase-description">
