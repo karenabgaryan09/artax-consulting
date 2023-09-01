@@ -34,6 +34,7 @@ const jsonLdData = {
     },
     datePublished: "2023-08-16",
 };
+
 export default function PakistanPharmacyIndustry() {
     const { pageFade } = useGlobalContext().animations;
     const { ms } = localData.images;
