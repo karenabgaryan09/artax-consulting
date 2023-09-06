@@ -15,6 +15,14 @@ export default function useValidation() {
         }).options({ abortEarly: false })
         return contactSchema.validate(obj);
     };
+    const validateComplimentaryChat = (obj) => {
+        const contactSchema = new Joi.object({
+            name:  Joi.string().min(3).required(),
+            surname:  Joi.string().min(3).required(),
+            email:  Joi.string().min(3).email({ tlds: { allow: false } }).required(),
+        }).options({ abortEarly: false })
+        return contactSchema.validate(obj);
+    };
 
-    return {validateContact}
+    return {validateContact,validateComplimentaryChat}
 }

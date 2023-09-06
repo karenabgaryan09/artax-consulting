@@ -23,6 +23,9 @@ const images = {
     preloader: require("./assets/images/icons/preloader.gif"),
     jp: require("./assets/images/jp.webp"),
     ms: require("./assets/images/ms.webp"),
+    okrConsultingImg1: require("./assets/images/okr-consulting/img-1.jpg"),
+    okrConsultingImg2: require("./assets/images/okr-consulting/img-2.jpg"),
+    okrConsultingImg3: require("./assets/images/okr-consulting/img-3.jpg"),
 
     // pattern: require("./assets/images/pattern.png"),
 };

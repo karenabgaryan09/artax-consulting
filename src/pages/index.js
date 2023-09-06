@@ -8,3 +8,4 @@ export { default as BusinessGlossary } from "./business-glossary/BusinessGlossar
 export { default as SingleBusinessGlossary } from "./single-business-glossary/SingleBusinessGlossary.js";
 export { default as Masterclass } from "./masterclass/Masterclass.js";
 export { default as PakistanPharmacyIndustry } from "./articles/pakistan-pharmacy-industry/PakistanPharmacyIndustry.js";
+export { default as OkrConsulting } from "./articles/okr-consulting/OkrConsulting.js";
