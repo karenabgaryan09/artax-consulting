@@ -23,9 +23,24 @@ const Schedule = {
   component: () => import('./src/pages/schedule/Schedule.js')
 };
 
-const TestPage = {
+const Masterclass = {
+  path: '/consultants/jonathan-poston',
+  component: () => import('./src/pages/masterclass/Masterclass.js')
+};
+
+const PakistanPharmacyIndustry = {
+  path: '/expert-advice/pakistan-pharmacy-industry',
+  component: () => import('./src/pages/articles/pakistan-pharmacy-industry/PakistanPharmacyIndustry.js')
+};
+
+const OkrConsulting = {
+  path: '/okr-consulting',
+  component: () => import('./src/pages/articles/okr-consulting/OkrConsulting.js')
+};
+
+const BusinessGlossary = {
   path: '/business-glossary/:slug',
-  component: () => import('./src/pages/business-glossary/TestPage.js')
+  component: () => import('./src/pages/business-glossary/BusinessGlossary.js')
 };
 
 const routes = [
@@ -34,7 +49,10 @@ const routes = [
   Calculators,
   ReductionConsultants,
   Schedule,
-  TestPage,
+  Masterclass,
+  PakistanPharmacyIndustry,
+  OkrConsulting,
+  BusinessGlossary,
   // ... other routes
 ];
 
