@@ -269,7 +269,8 @@
             margin-bottom: 40px;
             @include mq(576px) {
                 grid-template-columns: 1fr 1fr;
-                .message {
+                .message,
+                .mobile {
                     grid-column: 2 span;
                 }
             }
