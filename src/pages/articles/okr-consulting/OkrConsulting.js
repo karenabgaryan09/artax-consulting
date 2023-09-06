@@ -53,7 +53,6 @@ export default function PakistanPharmacyIndustry() {
     const [wasSubmitted, setWasSubmitted] = useState(false);
     const [state, setState] = useState({
         name: "",
-        surname: "",
         email: "",
     });
 
@@ -228,13 +227,6 @@ export default function PakistanPharmacyIndustry() {
                             <br />
                             <br />
 
-                            <img className="showcase-image" src={ms} alt="unknown" />
-                            <br />
-
-                            <em>By Unknown (location)</em>
-                            <br />
-                            <br />
-                            <br />
                         </div>
                     </article>
                     <br/>
@@ -258,13 +250,6 @@ export default function PakistanPharmacyIndustry() {
                                 variant="outlined"
                                 name="name"
                                 errorMessage={errorMessages.name}
-                                callback={onChange}
-                            />
-                            <FieldBtn
-                                label="Surname *"
-                                variant="outlined"
-                                name="surname"
-                                errorMessage={errorMessages.surname}
                                 callback={onChange}
                             />
 
