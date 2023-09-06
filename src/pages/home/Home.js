@@ -251,8 +251,7 @@ function ContactSection() {
     const [state, setState] = useState({
         name: "",
         email: "",
-        surname: "",
-        agency: "",
+        company: "",
         role: "",
         mobile: "",
         message: "",
@@ -330,17 +329,10 @@ function ContactSection() {
                             callback={onChange}
                         />
                         <FieldBtn
-                            label="Surname *"
+                            label="Company *"
                             variant="outlined"
-                            name="surname"
-                            errorMessage={errorMessages.surname}
-                            callback={onChange}
-                        />
-                        <FieldBtn
-                            label="Agency *"
-                            variant="outlined"
-                            name="agency"
-                            errorMessage={errorMessages.agency}
+                            name="company"
+                            errorMessage={errorMessages.company}
                             callback={onChange}
                         />
                         <FieldBtn

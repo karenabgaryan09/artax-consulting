@@ -54,6 +54,7 @@ export default function PakistanPharmacyIndustry() {
     const [state, setState] = useState({
         name: "",
         email: "",
+        company: ""
     });
 
     const onChange = (e) => {
@@ -105,7 +106,7 @@ export default function PakistanPharmacyIndustry() {
                                 Space Technology Company
                             </h1>
 
-                            <em>Written by Unknown</em>
+                            <em>Written by Artax Consulting</em>
                             <br />
                             <p style={{ fontSize: "16px" }}> Last updated: Aug 16, 2023 • 8 min read</p>
                             <br />
@@ -258,6 +259,13 @@ export default function PakistanPharmacyIndustry() {
                                 variant="outlined"
                                 name="email"
                                 errorMessage={errorMessages.email}
+                                callback={onChange}
+                            />
+                            <FieldBtn
+                                label="Company *"
+                                variant="outlined"
+                                name="company"
+                                errorMessage={errorMessages.company}
                                 callback={onChange}
                             />
 
