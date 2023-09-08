@@ -105,7 +105,13 @@ export default function PakistanPharmacyIndustry() {
                         <div className="container-sm">
                             <h1 className="showcase-title">Development of the Brazilian Space Program</h1>
 
-                            <em>Written by Artax Consulting</em>
+                            <em>
+                                Written by{" "}
+                                <a href="https://www.researchgate.net/profile/Maximilian-Espuny" target="_blank" className="link-dark" underline="always">
+                                    Maximilian Espuny
+                                </a>{" "}
+                                Last updated: September 8, 2023
+                            </em>
                             <br />
                             <p style={{ fontSize: "16px" }}> Last updated: Aug 16, 2023 • 8 min read</p>
                             <br />
@@ -153,7 +159,7 @@ export default function PakistanPharmacyIndustry() {
                             <br />
                             <br />
 
-                            <h2>The Alcântara Disaster and Its Impactsy</h2>
+                            <h2>The Alcântara Disaster and Its Impacts</h2>
 
                             <p className="showcase-description">
                                 Around the turn of the century, the Brazilian space program experienced its
@@ -266,7 +272,7 @@ export default function PakistanPharmacyIndustry() {
                             <img className="showcase-image" src={maximilianEspuny} alt="Maximilian Espuny" />
                             <br />
 
-                            <em>By Maximilian Espuny (profession, location)</em>
+                            <em>By Maximilian Espuny</em>
                             <br />
                             <br />
                             <br />
@@ -285,7 +291,7 @@ export default function PakistanPharmacyIndustry() {
                             onSubmit={onSubmit}
                         >
                             <h2 className="display-4">
-                                Request a complimentary chat with Artax's OKR Consultants
+                            Request a Complimentary Chat With Artax's Strategy Consultants
                             </h2>
                             <br />
                             <br />
@@ -315,13 +321,13 @@ export default function PakistanPharmacyIndustry() {
                             <input
                                 type="text"
                                 name="message_to_user"
-                                defaultValue="You have Requested a complimentary chat with Artax's OKR Consultants"
+                                defaultValue="You have Requested a complimentary chat with Artax's Strategy Consultants"
                                 style={{ display: "none" }}
                             />
                             <input
                                 type="text"
                                 name="message_to_admin"
-                                defaultValue="Complimentary chat reques"
+                                defaultValue="Complimentary chat reques (Strategy Consultants)"
                                 style={{ display: "none" }}
                             />
                             {/* <Button variant="contained" color="primary" name="send" endIcon={send} /> */}
