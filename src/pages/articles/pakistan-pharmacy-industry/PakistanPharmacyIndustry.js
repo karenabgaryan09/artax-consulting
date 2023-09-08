@@ -37,7 +37,7 @@ const jsonLdData = {
 
 export default function PakistanPharmacyIndustry() {
     const { pageFade } = useGlobalContext().animations;
-    const { ms } = localData.images;
+    const { muhammadAli } = localData.images;
     useJsonLd(jsonLdData);
 
     useEffect(() => {
@@ -391,7 +391,7 @@ export default function PakistanPharmacyIndustry() {
                     
                          <img
                              className="showcase-image"
-                             src={ms}
+                             src={muhammadAli}
                              alt="Dr. Muhammad S. Ali (Pharmacist, Lahore Pakistan)"
                          />
                          <br />

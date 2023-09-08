@@ -22,12 +22,19 @@ const images = {
     consultants6: require("./assets/images/reduction-consultants/consultants-6.jpg"),
     preloader: require("./assets/images/icons/preloader.gif"),
     jp: require("./assets/images/jp.webp"),
-    ms: require("./assets/images/ms.webp"),
+
+    // OKR CONSULTING
     okrConsultingImg1: require("./assets/images/okr-consulting/img-1.jpg"),
     okrConsultingImg2: require("./assets/images/okr-consulting/img-2.jpg"),
     okrConsultingImg3: require("./assets/images/okr-consulting/img-3.jpg"),
-
-    // pattern: require("./assets/images/pattern.png"),
+    
+    // PAKISTAN PHARMACY INDUSTRY
+    muhammadAli: require("./assets/images/pakistan-pharmacy-industry/muhammad-ali.webp"),
+    
+    // BRAZIL SPACE PROGRAM
+    maximilianEspuny: require("./assets/images/brazil-space-program/maximilian-espuny.jpg"),
+    brazilSpaceProgramImg1: require("./assets/images/brazil-space-program/img-1.jpg"),
+    brazilSpaceProgramImg2: require("./assets/images/brazil-space-program/img-2.jpg"),
 };
 
 const localData = {

@@ -20,13 +20,11 @@ import useValidation from "../../hooks/validation/useValidation";
 
 // HEADER
 function HeaderInner() {
-    const { ref: blockRef, inView: heroInView } = useObserver();
 
     return (
-        <div className="hero-inner" ref={blockRef}>
+        <div className="hero-inner" >
             <div
-                className={`container ${heroInView ? "lazy-animate" : ""}`}
-                data-lazy="fade-up"
+                className={`container`}
                 
                 // style={{ transitionDelay: (300 || 1 * 0.1) + "s" }}
             >
@@ -67,9 +65,7 @@ function InfoSectionArtcleTop() {
             <div className="col col-right">
                 <div className="container">
                     <div
-                        className={`wrapper  ${row1InView ? "lazy-animate" : ""}`}
-                        data-lazy="fade-up"
-                        style={{ transitionDelay: ".3s" }}
+                        className={`wrapper`}
                     >
                         <h6 className="info-sup display-6">Strategic Management</h6>
                         <h2 className="display-3 info-title">
@@ -110,9 +106,7 @@ function InfoSectionArtcleBottom() {
             <div className="col col-right">
                 <div className="container">
                     <div
-                        className={`wrapper  ${row2InView ? "lazy-animate" : ""}`}
-                        data-lazy="fade-up"
-                        style={{ transitionDelay: ".3s" }}
+                        className={`wrapper`}
                     >
                         <h6 className="info-sup display-6">Enterprise Digital Strategy</h6>
                         <h2 className="display-3 info-title">Innovate, digitize & modernize</h2>
@@ -196,7 +190,6 @@ function OurPeopleSection() {
 
 // PARTNERS
 function PartnersSection() {
-    const { ref: partnersRef, inView: partnersInView } = useObserver();
     const { threeM, petsafe, daimler } = localData.images;
     const partners = [
         { title: "3M Science", icon: threeM },
@@ -222,13 +215,11 @@ function PartnersSection() {
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores obcaecati odit quidem voluptates
                     tempore
                 </p> */}
-                <div className="partner-group" ref={partnersRef}>
+                <div className="partner-group">
                     {partners.map(({ icon }, index) => (
                         <div
                             key={index}
-                            className={`partner ${partnersInView ? "lazy-animate" : ""}`}
-                            data-lazy="fade-left"
-                            style={{ transitionDelay: index * 0.1 + "s" }}
+                            className={`partner`}
                         >
                             <img src={icon} alt="" />
                         </div>

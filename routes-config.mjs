@@ -33,6 +33,11 @@ const PakistanPharmacyIndustry = {
   component: () => import('./src/pages/articles/pakistan-pharmacy-industry/PakistanPharmacyIndustry.js')
 };
 
+const BrazilSpaceProgram = {
+  path: '/expert-advice/brazil-space-program',
+  component: () => import('./src/pages/articles/brazil-space-program/BrazilSpaceProgram.js')
+};
+
 const OkrConsulting = {
   path: '/okr-consulting',
   component: () => import('./src/pages/articles/okr-consulting/OkrConsulting.js')
@@ -51,6 +56,7 @@ const routes = [
   Schedule,
   Masterclass,
   PakistanPharmacyIndustry,
+  BrazilSpaceProgram,
   OkrConsulting,
   BusinessGlossary,
   // ... other routes

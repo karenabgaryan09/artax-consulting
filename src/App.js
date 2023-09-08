@@ -11,6 +11,7 @@ import {
     SingleBusinessGlossary,
     Masterclass,
     PakistanPharmacyIndustry,
+    BrazilSpaceProgram,
     OkrConsulting
 } from "./pages";
 import { Route, Routes } from "react-router-dom";
@@ -45,6 +46,7 @@ export default function App() {
 
                     {/* ARTICLES */}
                     <Route path="/expert-advice/pakistan-pharmacy-industry" element={<PakistanPharmacyIndustry />} />
+                    <Route path="/expert-advice/brazil-space-program" element={<BrazilSpaceProgram />} />
                     <Route path="/okr-consulting" element={<OkrConsulting />} />
 
                     <Route path="*" element={<Error />} />
