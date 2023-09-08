@@ -351,7 +351,7 @@ export default function PakistanPharmacyIndustry() {
                     
                          <h2> Author bio</h2>
                          <p className="showcase-description">
-                             Muhammad S. Ali, PharmD (Punjab University, College of Pharmacy) currently works
+                          <strong>Muhammad S. Ali</strong>, PharmD (Punjab University, College of Pharmacy) currently works
                              at Dozz Pharmacy and Medlite Pharmacy in Lahore Pakistan.{" "}
                              {/* <Button
                                  className={`${isBioHidden ? "" : "hidden"}`}
