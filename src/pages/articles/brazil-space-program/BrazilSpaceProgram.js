@@ -38,7 +38,7 @@ const jsonLdData = {
     datePublished: "2023-09-07",
 };
 
-export default function PakistanPharmacyIndustry() {
+export default function BrazilSpaceProgram() {
     const { pageFade } = useGlobalContext().animations;
     const { maximilianEspuny, brazilSpaceProgramImg1, brazilSpaceProgramImg2 } = localData.images;
     useJsonLd(jsonLdData);
@@ -99,7 +99,7 @@ export default function PakistanPharmacyIndustry() {
             {/* <Header title="home" className="hero-pakistan-pharmacy-industry">
                 <HeaderInner />
             </Header> */}
-            <main className="okr-consulting-page">
+            <main className="brazil-space-program-page">
                 <section className="showcase">
                     <article>
                         <div className="container-sm">
@@ -110,10 +110,9 @@ export default function PakistanPharmacyIndustry() {
                                 <a href="https://www.researchgate.net/profile/Maximilian-Espuny" target="_blank" className="link-dark" underline="always">
                                     Maximilian Espuny
                                 </a>{" "}
-                                Last updated: September 8, 2023
                             </em>
                             <br />
-                            <p style={{ fontSize: "16px" }}> Last updated: Aug 16, 2023 • 8 min read</p>
+                            <p style={{ fontSize: "16px" }}> Last updated: Sep 8, 2023</p>
                             <br />
 
                             <div className="responsive-image">
