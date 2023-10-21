@@ -9,6 +9,8 @@ import {
     ReductionConsultants,
     BusinessGlossary,
     SingleBusinessGlossary,
+    BusinessPeople,
+    SingleBusinessPeople,
     Masterclass,
     PakistanPharmacyIndustry,
     BrazilSpaceProgram,
@@ -41,8 +43,12 @@ export default function App() {
                     <Route path="/cost-reduction-consultants" element={<ReductionConsultants />} />
                     <Route path="/schedule-a-call" element={<Schedule />} />
                     <Route path="/consultants/jonathan-poston" element={<Masterclass />} />
+
                     <Route path="/business-glossary" element={<BusinessGlossary />} />
                     <Route path="/business-glossary/:slug" element={<SingleBusinessGlossary />} />
+
+                    <Route path="/business-people" element={<BusinessPeople />} />
+                    <Route path="/business-people/:slug" element={<SingleBusinessPeople />} />
 
                     {/* ARTICLES */}
                     <Route path="/expert-advice/pakistan-pharmacy-industry" element={<PakistanPharmacyIndustry />} />
