@@ -56,16 +56,33 @@ export default function useFetch() {
         const url = urls.jsonPlaceholder + "/photos?_limit=134";
         return await request({ url, method: "GET", cb });
     };
-    const getPosts = async (cb) => {
+    const getBusinessGlossaryData = async (cb) => {
         // const spreadsheetId = "1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0";
         // const range = "testing";
         // const url = urls.spreadsheets + "/v4/spreadsheets/" + spreadsheetId + "/values/" + range;
         // const url = 'https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?'
-        const url = 'https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?'
+        const url =
+            "https://docs.google.com/spreadsheets/d/1Aon9bNJFDs-joF7BhjD8BKulbLG79-ACcqxStSxwVX0/gviz/tq?";
+        return await request({ url, method: "GET", cb });
+    };
+    const getBusinessPeopleData = async (cb) => {
+        const url =
+            "https://docs.google.com/spreadsheets/d/1e68mUP2UIc5GW66umO1tl2ldjBImEp1yBpT0Yurx9h0/gviz/tq?";
         return await request({ url, method: "GET", cb });
     };
 
     const clearError = () => setError(null);
 
-    return { getProducts, getProduct, getPosts, getUsers, getPhotos, loading, clearError, error, request };
+    return {
+        getProducts,
+        getProduct,
+        getBusinessGlossaryData,
+        getBusinessPeopleData,
+        getUsers,
+        getPhotos,
+        loading,
+        clearError,
+        error,
+        request,
+    };
 }

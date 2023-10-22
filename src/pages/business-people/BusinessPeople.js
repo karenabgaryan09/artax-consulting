@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Header, Footer, Button, SmallNavbar,Skeleton } from "../../components";
+import { Header, Footer, Button, SmallNavbar, Skeleton } from "../../components";
 import localData from "../../localData";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,14 +7,14 @@ import { useGlobalContext } from "../../context";
 
 export default function BusinessPeople() {
     const { pageFade } = useGlobalContext().animations;
-    const { businessGlossaryData } = useGlobalContext();
+    const { businessPeopleData } = useGlobalContext();
     const [slugs, setSlugs] = useState([]);
 
     useEffect(() => {
-        if (Object.keys(businessGlossaryData).length === 0) return;
-
-        setSlugs(Object.keys(businessGlossaryData));
-    }, [businessGlossaryData]);
+        if (Object.keys(businessPeopleData).length === 0) return;
+        console.log("trigger");
+        setSlugs(Object.keys(businessPeopleData));
+    }, [businessPeopleData]);
 
     return (
         <motion.div {...pageFade}>
@@ -27,19 +27,26 @@ export default function BusinessPeople() {
                             <br />
                             <br />
                             <div className="links">
-                                {!slugs.length
-                                    ? <Skeleton/>
-                                    : slugs.map((slug, index) => (
-                                       <div key={index}>
-                                           <Link to={`/business-people/${slug}`} className="link-primary" underline='hover'>
-                                               {slug}
-                                           </Link>
-                                       </div>
-                                      ))}
+                                {!slugs.length ? (
+                                    <Skeleton />
+                                ) : (
+                                    slugs.map((slug, index) => (
+                                        <div key={index}>
+                                            <Link
+                                                to={`/business-people/${slug}`}
+                                                className="link-primary"
+                                                underline="hover"
+                                            >
+                                                {slug}
+                                            </Link>
+                                        </div>
+                                    ))
+                                )}
                             </div>
                         </div>
                     </div>
                 </section>
+
             </main>
             <footer className="dark-footer"></footer>
             {/* <Footer /> */}

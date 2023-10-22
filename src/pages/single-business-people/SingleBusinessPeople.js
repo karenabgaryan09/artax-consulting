@@ -7,7 +7,7 @@ import { useGlobalContext } from "../../context";
 
 export default function SingleBusinessPeople() {
     const { pageFade } = useGlobalContext().animations;
-    const { businessGlossaryData } = useGlobalContext();
+    const { businessPeopleData } = useGlobalContext();
     const [state, setState] = useState({});
     const { preloader } = localData.images;
 
@@ -15,12 +15,13 @@ export default function SingleBusinessPeople() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (Object.keys(businessGlossaryData).length === 0) return;
-        setState(businessGlossaryData[params.slug] || {});
-        const slug = businessGlossaryData[params.slug]
+        if (Object.keys(businessPeopleData).length === 0) return;
+        setState(businessPeopleData[params.slug] || {});
+        const slug = businessPeopleData[params.slug]
+        console.log(businessPeopleData)
         if(slug) return 
         navigate('/business-glossary')
-    }, [businessGlossaryData]);
+    }, [businessPeopleData]);
 
     useEffect(() => {
         if (!state.metaTitle) return;

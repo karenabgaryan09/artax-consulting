@@ -95,9 +95,10 @@ export default function Provider({ children }) {
 
     // BUSINESS GLOSSARY DATA
     const [businessGlossaryData,setBusinessGlossaryData] = useState({})
-    const { getPosts } = useFetch();
+    const [businessPeopleData,setBusinessPeopleData] = useState({})
+    const { getBusinessGlossaryData,getBusinessPeopleData } = useFetch();
 
-    const getConvertedData = (data) => {
+    const getBusinessGlossaryConvertedData = (data) => {
         const convertedData = {};
         data.table.rows.forEach((item, index) => {
             const obj = {};
@@ -109,12 +110,29 @@ export default function Provider({ children }) {
         });
         return convertedData
     };
+    const getBusinessPeopleConvertedData = (data) => {
+        const convertedData = {};
+        data.table.rows.forEach((item, index) => {
+            const obj = {};
+            obj.metaTitle = item.c[1]?.v;
+            obj.metaDescription = item.c[2]?.v;
+            obj.h1 = item.c[3]?.v;
+            obj.paragraph = item.c[4]?.v;
+            convertedData[item.c[0]?.v.toLowerCase()] = obj;
+        });
+        return convertedData
+    };
 
     useEffect(() => {
-        getPosts((err, data) => {
+        getBusinessGlossaryData((err, data) => {
             const tempData = JSON.parse(data.substr(47).slice(0, -2));
-            const convertedData =  getConvertedData(tempData);
+            const convertedData =  getBusinessGlossaryConvertedData(tempData);
             setBusinessGlossaryData(convertedData);
+        });
+        getBusinessPeopleData((err, data) => {
+            const tempData = JSON.parse(data.substr(47).slice(0, -2));
+            const convertedData =  getBusinessPeopleConvertedData(tempData);
+            setBusinessPeopleData(convertedData);
         });
     }, []);
 
@@ -130,7 +148,8 @@ export default function Provider({ children }) {
                 sendMessageToAdmin,
                 isMessageSending,
                 isMessageSendingToUser,
-                businessGlossaryData
+                businessGlossaryData,
+                businessPeopleData
             }}
         >
             {children}
