@@ -47,6 +47,10 @@ const BusinessGlossary = {
   path: '/business-glossary/:slug',
   component: () => import('./src/pages/business-glossary/BusinessGlossary.js')
 };
+const BusinessPeople = {
+  path: '/business-people/:slug',
+  component: () => import('./src/pages/business-people/BusinessPeople.js')
+};
 
 const routes = [
   Home,
@@ -59,6 +63,7 @@ const routes = [
   BrazilSpaceProgram,
   OkrConsulting,
   BusinessGlossary,
+  BusinessPeople
   // ... other routes
 ];
 
