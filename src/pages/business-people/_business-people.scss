@@ -1,0 +1,11 @@
+.business-people-page {
+    .links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        // justify-content: space-between;
+        grid-gap: 3px 30px;
+        .link-primary {
+            // display: inline-block !important; 
+        }
+    }
+}

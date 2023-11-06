@@ -22,6 +22,7 @@ const images = {
     consultants6: require("./assets/images/reduction-consultants/consultants-6.jpg"),
     preloader: require("./assets/images/icons/preloader.gif"),
     jp: require("./assets/images/jp.webp"),
+    malytskyi: require("./assets/images/articles/malytskyi.webp"),
 
     // OKR CONSULTING
     okrConsultingImg1: require("./assets/images/okr-consulting/img-1.jpg"),

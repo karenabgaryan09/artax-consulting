@@ -106,6 +106,7 @@ export default function Provider({ children }) {
             obj.metaDescription = item.c[2]?.v;
             obj.h1 = item.c[5]?.v;
             obj.paragraph = item.c[6]?.v;
+            obj.image = item.c[7]?.v;
             convertedData[item.c[0]?.v.toLowerCase()] = obj;
         });
         return convertedData

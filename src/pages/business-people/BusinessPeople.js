@@ -19,7 +19,7 @@ export default function BusinessPeople() {
     return (
         <motion.div {...pageFade}>
             <SmallNavbar />
-            <main className="business-glossary-page">
+            <main className="business-people-page">
                 <section className="schedule">
                     <div className="container">
                         <div className="schedule-content">
