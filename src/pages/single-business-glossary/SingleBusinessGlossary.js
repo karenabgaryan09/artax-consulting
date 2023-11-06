@@ -42,11 +42,14 @@ export default function SingleBusinessGlossary() {
                             ) : (
                                 <>
                                     <h1 className="display-3">{state.h1}</h1>
-                                    {/* <p className="description" >{state.paragraph || "null"}</p> */}
-                                    <p className="description" dangerouslySetInnerHTML={{ __html: state.paragraph || "null" }}></p>
                                     <br/>
                                     {state.image && <img className="image" src={localData.images[state.image]}/>}
-                                </>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    {/* <p className="description" >{state.paragraph || "null"}</p> */}
+                                    <p className="description" dangerouslySetInnerHTML={{ __html: state.paragraph || "null" }}></p>
+                                    </>
                             )}
                         </div>
                     </div>
