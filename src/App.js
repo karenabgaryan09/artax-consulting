@@ -4,7 +4,6 @@ import {
     Home,
     PrivacyPolicy,
     Error,
-    Calculators,
     Schedule,
     ReductionConsultants,
     BusinessGlossary,
@@ -14,7 +13,11 @@ import {
     Masterclass,
     PakistanPharmacyIndustry,
     BrazilSpaceProgram,
-    OkrConsulting
+    OkrConsulting,
+    Calculators,
+    SeoCalculator,
+    RoasCalculator,
+    BusinessValuationCalculator
 } from "./pages";
 import { Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -39,10 +42,14 @@ export default function App() {
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                    <Route path="/calculators" element={<Calculators />} />
                     <Route path="/cost-reduction-consultants" element={<ReductionConsultants />} />
                     <Route path="/schedule-a-call" element={<Schedule />} />
                     <Route path="/consultants/jonathan-poston" element={<Masterclass />} />
+
+                    <Route path="/calculators" element={<Calculators />} />
+                    <Route path="/calculators/seo-calculator" element={<SeoCalculator />} />
+                    <Route path="/calculators/roas-calculator" element={<RoasCalculator />} />
+                    <Route path="/calculators/business-valuation-calculator" element={<BusinessValuationCalculator />} />
 
                     <Route path="/business-glossary" element={<BusinessGlossary />} />
                     <Route path="/business-glossary/:slug" element={<SingleBusinessGlossary />} />

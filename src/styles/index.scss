@@ -24,16 +24,20 @@
 @import '../pages/home/home';
 @import '../pages/privacy-policy/privacy-policy';
 @import '../pages/error/error';
-@import '../pages/calculators/calculators';
 @import '../pages/reduction-consultants/reduction-consultants';
 @import '../pages/schedule/schedule';
-@import '../pages/business-glossary/business-glossary';
-@import '../pages/business-people/business-people';
-@import '../pages/single-business-glossary/single-business-glossary';
 @import '../pages/masterclass/masterclass';
 @import '../pages/articles/pakistan-pharmacy-industry/pakistan-pharmacy-industry';
 @import '../pages/articles/brazil-space-program/brazil-space-program';
 @import '../pages/articles/okr-consulting/okr-consulting';
+
+@import '../pages/calculators/calculators';
+@import '../pages/calculators/seo-calculator/seo-calculator.scss';
+
+@import '../pages/business-glossary/business-glossary';
+@import '../pages/single-business-glossary/single-business-glossary';
+
+@import '../pages/business-people/business-people';
 
 // CALCULATOR SECTIONS
 @import '../pages/calculators/sections/seo/seo';

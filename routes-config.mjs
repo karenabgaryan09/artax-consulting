@@ -12,6 +12,19 @@ const Calculators = {
   path: '/calculators',
   component: () => import('./src/pages/calculators/Calculators.js')
 };
+const SeoCalculator = {
+  path: '/calculators/seo-calculator',
+  component: () => import('./src/pages/calculators/seo-calculator/SeoCalculator.js')
+};
+const RoasCalculator = {
+  path: '/calculators/roas-calculator',
+  component: () => import('./src/pages/calculators/roas-calculator/RoasCalculator.js')
+};
+const BusinessValuationCalculator = {
+  path: '/calculators/business-valuation-calculator',
+  component: () => import('./src/pages/calculators/business-valuation-calculator/BusinessValuationCalculator.js')
+};
+
 
 const ReductionConsultants = {
   path: '/cost-reduction-consultants',
@@ -56,6 +69,9 @@ const routes = [
   Home,
   PrivacyPolicy,
   Calculators,
+  SeoCalculator,
+  RoasCalculator,
+  BusinessValuationCalculator,
   ReductionConsultants,
   Schedule,
   Masterclass,
@@ -63,7 +79,7 @@ const routes = [
   BrazilSpaceProgram,
   OkrConsulting,
   BusinessGlossary,
-  BusinessPeople
+  BusinessPeople,
   // ... other routes
 ];
 

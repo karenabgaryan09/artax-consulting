@@ -23,6 +23,7 @@ const images = {
     preloader: require("./assets/images/icons/preloader.gif"),
     jp: require("./assets/images/jp.webp"),
     malytskyi: require("./assets/images/articles/malytskyi.webp"),
+    sungshin: require("./assets/images/articles/sung-shin.webp"),
 
     // OKR CONSULTING
     okrConsultingImg1: require("./assets/images/okr-consulting/img-1.jpg"),

@@ -379,7 +379,7 @@ section {
 }
 
 main {
-    min-height: 100vh;
+    // min-height: 100vh;
 }
 
 .responsive-image {
@@ -458,4 +458,13 @@ main {
 
 .hidden {
     display: none !important;
+}
+
+.full-screen-cover {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    main {
+        flex: 1;
+    }
 }
