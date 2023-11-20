@@ -13,8 +13,9 @@ export default function RoasCalculator() {
 
     useEffect(() => {
         document.title = "ROAS Calculator";
-        document.description =
-            "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.content =
+            "Try our free online Return on Advertising Spend (ROAS) Calculator – your go-to tool for precision in assessing the effectiveness of your advertising campaigns. Input your revenue from ads and the total cost of advertising, and let the calculator crunch the numbers instantly. Optimize your marketing strategy by gaining valuable insights into the efficiency of your ad investments";
     }, [state]);
 
     return (

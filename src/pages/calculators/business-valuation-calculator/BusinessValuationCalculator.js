@@ -13,8 +13,6 @@ export default function BusinessValuationCalculator() {
 
     useEffect(() => {
         document.title = "Business Valuation calculator";
-        document.description =
-            "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
     }, [state]);
 
     return (

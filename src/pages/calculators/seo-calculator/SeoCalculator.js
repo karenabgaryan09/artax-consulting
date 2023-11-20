@@ -8,14 +8,15 @@ import SeoSection from "../sections/seo/SeoSection";
 
 export default function SeoCalculator() {
     const { pageFade } = useGlobalContext().animations;
-    const [state, setState] = useState({});
     const { preloader } = localData.images;
 
     useEffect(() => {
         document.title = "SEO keyword ROI value calculator";
-        document.description =
-            "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
-    }, [state]);
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.content =
+        "This SEO keyword ROI value calculator requires inputs of monthly search volume, position, organic conversion rate, average order value in dollars, and it will calculate the revenue value of your SEO keywords.";
+    }, []);
 
     return (
         <motion.div {...pageFade} className="full-screen-cover">

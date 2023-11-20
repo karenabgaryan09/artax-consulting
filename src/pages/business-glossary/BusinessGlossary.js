@@ -7,7 +7,7 @@ import { useGlobalContext } from "../../context";
 
 export default function BusinessGlossary() {
     const { pageFade } = useGlobalContext().animations;
-    const { businessGlossaryData } = useGlobalContext();
+    const { businessGlossaryData,resetMetaTags } = useGlobalContext();
     const [slugs, setSlugs] = useState([]);
 
     useEffect(() => {
@@ -15,9 +15,14 @@ export default function BusinessGlossary() {
 
         setSlugs(Object.keys(businessGlossaryData));
     }, [businessGlossaryData]);
+    
+
+    useEffect(() => {
+        resetMetaTags()
+    }, []);
 
     return (
-        <motion.div {...pageFade}>
+        <motion.div {...pageFade} className="full-screen-cover">
             <SmallNavbar />
             <main className="business-glossary-page">
                 <section className="schedule">

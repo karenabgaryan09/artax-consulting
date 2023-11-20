@@ -3,6 +3,8 @@ import localData from "./localData";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import useFetch from "./hooks/useFetch";
+
+
 export const Context = createContext();
 
 export default function Provider({ children }) {
@@ -68,35 +70,35 @@ export default function Provider({ children }) {
                 successAlert(message);
                 setIsMessageSending(false);
                 sendMessageToUser(form);
-                successCallback()
+                successCallback();
             },
             (error) => {
                 errorAlert();
                 setIsMessageSending(false);
-                errorCallback()
+                errorCallback();
             }
         );
     };
 
     const [isMessageSendingToUser, setIsMessageSendingToUser] = useState(false);
     const sendMessageToUser = (form) => {
-        setIsMessageSendingToUser(true)
+        setIsMessageSendingToUser(true);
         emailjs.sendForm("service_6fbyiy3", "template_o4yehwt", form, "Nyfe0gSIb8TlPNiVB").then(
             (result) => {
                 console.log("successfully sent message to user");
-                setIsMessageSendingToUser(false)
+                setIsMessageSendingToUser(false);
             },
             (error) => {
                 console.log("failed to send message to user");
-                setIsMessageSendingToUser(false)
+                setIsMessageSendingToUser(false);
             }
         );
     };
 
     // BUSINESS GLOSSARY DATA
-    const [businessGlossaryData,setBusinessGlossaryData] = useState({})
-    const [businessPeopleData,setBusinessPeopleData] = useState({})
-    const { getBusinessGlossaryData,getBusinessPeopleData } = useFetch();
+    const [businessGlossaryData, setBusinessGlossaryData] = useState({});
+    const [businessPeopleData, setBusinessPeopleData] = useState({});
+    const { getBusinessGlossaryData, getBusinessPeopleData } = useFetch();
 
     const getBusinessGlossaryConvertedData = (data) => {
         const convertedData = {};
@@ -109,7 +111,7 @@ export default function Provider({ children }) {
             obj.image = item.c[7]?.v;
             convertedData[item.c[0]?.v.toLowerCase()] = obj;
         });
-        return convertedData
+        return convertedData;
     };
     const getBusinessPeopleConvertedData = (data) => {
         const convertedData = {};
@@ -121,21 +123,30 @@ export default function Provider({ children }) {
             obj.paragraph = item.c[4]?.v;
             convertedData[item.c[0]?.v.toLowerCase()] = obj;
         });
-        return convertedData
+        return convertedData;
     };
 
     useEffect(() => {
         getBusinessGlossaryData((err, data) => {
             const tempData = JSON.parse(data.substr(47).slice(0, -2));
-            const convertedData =  getBusinessGlossaryConvertedData(tempData);
+            const convertedData = getBusinessGlossaryConvertedData(tempData);
             setBusinessGlossaryData(convertedData);
         });
         getBusinessPeopleData((err, data) => {
             const tempData = JSON.parse(data.substr(47).slice(0, -2));
-            const convertedData =  getBusinessPeopleConvertedData(tempData);
+            const convertedData = getBusinessPeopleConvertedData(tempData);
             setBusinessPeopleData(convertedData);
         });
     }, []);
+
+    
+    const resetMetaTags = () => {
+        document.title = "Global Management Consulting | Artax";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.content =
+            "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
+    };
 
     return (
         <Context.Provider
@@ -150,7 +161,8 @@ export default function Provider({ children }) {
                 isMessageSending,
                 isMessageSendingToUser,
                 businessGlossaryData,
-                businessPeopleData
+                businessPeopleData,
+                resetMetaTags
             }}
         >
             {children}

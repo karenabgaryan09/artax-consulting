@@ -90,7 +90,8 @@ export default function SeoSection() {
                 // calculation Three
                 volumePositionOrganicOrder = volumePositionOrganic * avgOrderValue;
                 // output.innerHTML = '$'+ volumePositionOrganicOrder.toFixed();
-                document.querySelector(".seo .send_result").value = "$" + volumePositionOrganicOrder.toFixed();
+                document.querySelector(".seo .send_result").value =
+                    "$" + volumePositionOrganicOrder.toFixed();
                 setResult("hidden");
             } catch (e) {
                 toEmail.classList.add("hidden");
@@ -146,83 +147,104 @@ export default function SeoSection() {
     return (
         <section className="seo">
             <div className="container">
-                <h1 className="seo-title">SEO keyword ROI value calculator</h1>
+                <div className="seo-calculator-content">
+                    <h1 className="seo-title">SEO keyword ROI value calculator</h1>
 
-                <form className="form" ref={myForm} onSubmit={(e) => e.preventDefault()}>
-                    <input
-                        type="text"
-                        id="searchVolume"
-                        className="field awesomeInput "
-                        name="volume"
-                        placeholder="Search Volume (per month)"
-                    />
-                    <input
-                        type="text"
-                        id="position"
-                        className="field awesomeInput "
-                        name="position"
-                        placeholder="Position (1-100)"
-                    />
-                    <input
-                        type="text"
-                        id="conversion"
-                        className="field awesomeInput "
-                        name="conversion"
-                        placeholder="Organic Conversion (Percentage)"
-                    />
-                    <input
-                        type="text"
-                        id="avgOrderValue"
-                        className="field awesomeInput "
-                        name="value"
-                        placeholder="Average Order Value ($)"
-                        style={{ marginBottom: "2rem" }}
-                    />
+                    <form className="form" ref={myForm} onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            id="searchVolume"
+                            className="field awesomeInput "
+                            name="volume"
+                            placeholder="Search Volume (per month)"
+                        />
+                        <input
+                            type="text"
+                            id="position"
+                            className="field awesomeInput "
+                            name="position"
+                            placeholder="Position (1-100)"
+                        />
+                        <input
+                            type="text"
+                            id="conversion"
+                            className="field awesomeInput "
+                            name="conversion"
+                            placeholder="Organic Conversion (Percentage)"
+                        />
+                        <input
+                            type="text"
+                            id="avgOrderValue"
+                            className="field awesomeInput "
+                            name="value"
+                            placeholder="Average Order Value ($)"
+                            style={{ marginBottom: "2rem" }}
+                        />
 
-                    <input
-                        type="text"
-                        className="field"
-                        name="from_email"
-                        defaultValue="info@jonathanposton.com"
-                        style={{ display: "none" }}
-                    />
-                    <input type="text" name="send_result" className="send_result" style={{ display: "none" }} />
-                    <input
-                        type="text"
-                        name="value_1"
-                        defaultValue="Your estimated monthly keyword revenue ="
-                        style={{ display: "none" }}
-                    />
-                    <input
-                        type="text"
-                        name="value_2"
-                        defaultValue="Contact us to create a growth strategy to win more search share for this keyword."
-                        style={{ display: "none" }}
-                    />
-
-                    <Button variant="contained" color="dark" size="xl" className="seo-btn">
-                        calculate
-                    </Button>
-                    <div id="output"></div>
-
-                    <div className={`form-group ${!result ? "hidden" : ""}`}>
                         <input
                             type="text"
                             className="field"
-                            id="toEmail"
-                            name="email"
-                            placeholder="enter your email to receive the results."
+                            name="from_email"
+                            defaultValue="info@jonathanposton.com"
+                            style={{ display: "none" }}
                         />
-                        <Button
-                            disabled={isMessageSending}
-                            variant="contained"
-                            color="primary"
-                            onClick={() => onSubmitHandler()}
-                        >
-                            send
+                        <input
+                            type="text"
+                            name="send_result"
+                            className="send_result"
+                            style={{ display: "none" }}
+                        />
+                        <input
+                            type="text"
+                            name="value_1"
+                            defaultValue="Your estimated monthly keyword revenue ="
+                            style={{ display: "none" }}
+                        />
+                        <input
+                            type="text"
+                            name="value_2"
+                            defaultValue="Contact us to create a growth strategy to win more search share for this keyword."
+                            style={{ display: "none" }}
+                        />
+
+                        <Button variant="contained" color="dark" size="xl" className="seo-btn">
+                            calculate
                         </Button>
-                    </div>
-                </form>
+                        <div id="output"></div>
+
+                        <div className={`form-group ${!result ? "hidden" : ""}`}>
+                            <input
+                                type="text"
+                                className="field"
+                                id="toEmail"
+                                name="email"
+                                placeholder="enter your email to receive the results."
+                            />
+                            <Button
+                                disabled={isMessageSending}
+                                variant="contained"
+                                color="primary"
+                                onClick={() => onSubmitHandler()}
+                            >
+                                send
+                            </Button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="embed-calculator">
+                    <p className="embed-calculator-description">
+                        This SEO keyword ROI value calculator requires inputs of monthly search volume,
+                        position, organic conversion rate, average order value in dollars, and it will
+                        calculate the revenue value of your SEO keywords.
+                    </p>
+                    <br />
+                    <br />
+
+                    <p className="embed-calculator-text">
+                        *Disclaimer:  this tool may or may not be accurate as every business case is different.
+                    </p>
+                </div>
             </div>
         </section>
     );

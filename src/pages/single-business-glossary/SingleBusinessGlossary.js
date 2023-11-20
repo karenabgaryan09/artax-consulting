@@ -25,15 +25,17 @@ export default function SingleBusinessGlossary() {
     useEffect(() => {
         if (!state.metaTitle) return;
         document.title = state.metaTitle || "Global Management Consulting | Artax";
-        document.description =
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.content = 
             state.metaDescription ||
             "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
     }, [state]);
 
     return (
-        <motion.div {...pageFade}>
+        <motion.div {...pageFade} className="full-screen-cover">
             <SmallNavbar />
-            <main className="single-business-glossary-page">
+            <main className="single-business-glossary-page" >
                 <section className="schedule">
                     <div className="container">
                         <div className="schedule-content">

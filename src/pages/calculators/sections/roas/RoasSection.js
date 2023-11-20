@@ -129,64 +129,92 @@ export default function RoasSection() {
     return (
         <section className="roas">
             <div className="container">
-                <h1 className="roas-title">ROAS Caclulator</h1>
+                <div className="roas-calculator-content">
+                    <h1 className="roas-title">ROAS Caclulator</h1>
 
-                <form className="form" ref={myForm} onSubmit={(e) => e.preventDefault()}>
-                    <input
-                        type="text"
-                        id="revenue"
-                        className="field awesomeInput "
-                        name="revenue"
-                        placeholder="revenue from ads"
-                    />
-                    <input
-                        type="text"
-                        id="advertising"
-                        className="field awesomeInput "
-                        name="advertising"
-                        placeholder="cost of advertising"
-                        style={{ marginBottom: "2rem" }}
-                    />
+                    <form className="form" ref={myForm} onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            id="revenue"
+                            className="field awesomeInput "
+                            name="revenue"
+                            placeholder="revenue from ads"
+                        />
+                        <input
+                            type="text"
+                            id="advertising"
+                            className="field awesomeInput "
+                            name="advertising"
+                            placeholder="cost of advertising"
+                            style={{ marginBottom: "2rem" }}
+                        />
 
-                    <input
-                        type="text"
-                        className="field"
-                        name="from_email"
-                        defaultValue="info@jonathanposton.com"
-                        style={{ display: "none" }}
-                    />
-                    <input type="text" name="send_result" className="send_result" style={{ display: "none" }} />
-                    <input type="text" name="value_1" defaultValue="Your ROAS is" style={{ display: "none" }} />
-                    <input
-                        type="text"
-                        name="value_2"
-                        defaultValue={`If your ROAS is less than 800% then there may be room for improvement.
-                                Contact us to look at ways of improving your ROAS.`}
-                        style={{ display: "none" }}
-                    />
-
-                    <Button variant="contained" color="dark" size="xl" className="roas-btn">
-                        calculate
-                    </Button>
-                    <div id="output"></div>
-                    <div className={`form-group ${!result ? "hidden" : ""}`}>
                         <input
                             type="text"
                             className="field"
-                            id="toEmail"
-                            name="email"
-                            placeholder="enter your email to receive the results."
+                            name="from_email"
+                            defaultValue="info@jonathanposton.com"
+                            style={{ display: "none" }}
                         />
-                        <Button
-                            disabled={isMessageSending}
-                            variant="contained"
-                            color="primary"
-                            onClick={() => onSubmitHandler()}
-                        >
-                            send
+                        <input
+                            type="text"
+                            name="send_result"
+                            className="send_result"
+                            style={{ display: "none" }}
+                        />
+                        <input
+                            type="text"
+                            name="value_1"
+                            defaultValue="Your ROAS is"
+                            style={{ display: "none" }}
+                        />
+                        <input
+                            type="text"
+                            name="value_2"
+                            defaultValue={`If your ROAS is less than 800% then there may be room for improvement.
+                                Contact us to look at ways of improving your ROAS.`}
+                            style={{ display: "none" }}
+                        />
+
+                        <Button variant="contained" color="dark" size="xl" className="roas-btn">
+                            calculate
                         </Button>
-                    </div>
-                </form>
+                        <div id="output"></div>
+                        <div className={`form-group ${!result ? "hidden" : ""}`}>
+                            <input
+                                type="text"
+                                className="field"
+                                id="toEmail"
+                                name="email"
+                                placeholder="enter your email to receive the results."
+                            />
+                            <Button
+                                disabled={isMessageSending}
+                                variant="contained"
+                                color="primary"
+                                onClick={() => onSubmitHandler()}
+                            >
+                                send
+                            </Button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="embed-calculator">
+                    <p className="embed-calculator-description">
+                        Try our free online Return on Advertising Spend (ROAS) Calculator – your go-to tool
+                        for precision in assessing the effectiveness of your advertising campaigns. Input your
+                        revenue from ads and the total cost of advertising, and let the calculator crunch the
+                        numbers instantly. Optimize your marketing strategy by gaining valuable insights into
+                        the efficiency of your ad investments
+                    </p>
+                    <br />
+                    <br />
+                  
+                    <p className="embed-calculator-text">
+                        *Disclaimer: this tool may or may not be accurate as every business case is different.
+                    </p>
+                </div>
             </div>
         </section>
     );

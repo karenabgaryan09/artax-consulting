@@ -24,15 +24,16 @@ const images = {
     jp: require("./assets/images/jp.webp"),
     malytskyi: require("./assets/images/articles/malytskyi.webp"),
     sungshin: require("./assets/images/articles/sung-shin.webp"),
+    calculatorCover: require("./assets/images/calculators/calculator-cover.webp"),
 
     // OKR CONSULTING
     okrConsultingImg1: require("./assets/images/okr-consulting/img-1.jpg"),
     okrConsultingImg2: require("./assets/images/okr-consulting/img-2.jpg"),
     okrConsultingImg3: require("./assets/images/okr-consulting/img-3.jpg"),
-    
+
     // PAKISTAN PHARMACY INDUSTRY
     muhammadAli: require("./assets/images/pakistan-pharmacy-industry/muhammad-ali.webp"),
-    
+
     // BRAZIL SPACE PROGRAM
     maximilianEspuny: require("./assets/images/brazil-space-program/maximilian-espuny.jpg"),
     brazilSpaceProgramImg1: require("./assets/images/brazil-space-program/img-1.jpg"),
@@ -75,6 +76,11 @@ const localData = {
         anglesLeft: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L269.3 256 406.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z" />
+            </svg>
+        ),
+        anglesRight: (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
             </svg>
         ),
         twitter: (

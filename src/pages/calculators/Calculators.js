@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Header, Footer, Button, SmallNavbar, } from "../../components";
+import { Header, Footer, Button, SmallNavbar } from "../../components";
 import localData from "../../localData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,19 +10,37 @@ import BusinessValuationSection from "./sections/business-valuation/BusinessValu
 
 export default function PrivacyPolicy() {
     const { pageFade } = useGlobalContext().animations;
-    const { anglesLeft } = localData.svgs;
+    const { calculatorCover } = localData.images;
 
     useEffect(() => {
         document.title = "Calculators";
     }, []);
 
     return (
-        <motion.div {...pageFade}>
-           <SmallNavbar className="sticky"/>
+        <motion.div {...pageFade}  className="full-screen-cover">
+            <SmallNavbar  />
             <main className="calculators-page">
-               <SeoSection/>
-               <RoasSection/>
-               <BusinessValuationSection/>
+                <div className="showcase">
+                    <img src={calculatorCover} />
+                </div>
+                <section>
+                    <div className="container">
+                    <Link to={'/calculators/seo-calculator'} className="link-primary" underline="hover">
+                    SEO Calculator
+                    </Link>
+                    <br/>
+                    <br/>
+                    <Link to={'/calculators/roas-calculator'} className="link-primary" underline="hover">
+                    ROAS Calculator
+                    </Link>
+                    <br/>
+                    <br/>
+                    <Link to={'/calculators/business-valuation-calculator'} className="link-primary" underline="hover">
+                    Business Valuation Calculator
+                    </Link>
+
+                    </div>
+                </section>
             </main>
             <footer className="dark-footer"></footer>
             {/* <Footer /> */}

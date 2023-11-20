@@ -18,7 +18,6 @@ export default function SingleBusinessPeople() {
         if (Object.keys(businessPeopleData).length === 0) return;
         setState(businessPeopleData[params.slug] || {});
         const slug = businessPeopleData[params.slug]
-        console.log(businessPeopleData)
         if(slug) return 
         navigate('/business-glossary')
     }, [businessPeopleData]);
@@ -26,13 +25,14 @@ export default function SingleBusinessPeople() {
     useEffect(() => {
         if (!state.metaTitle) return;
         document.title = state.metaTitle || "Global Management Consulting | Artax";
-        document.description =
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        metaDescription.content = 
             state.metaDescription ||
             "Artax Consulting is your trusted partner for strategic management and digital transformation in an age of turbulence.";
     }, [state]);
-
     return (
-        <motion.div {...pageFade}>
+        <motion.div {...pageFade} className="full-screen-cover">
             <SmallNavbar />
             <main className="single-business-glossary-page">
                 <section className="schedule">

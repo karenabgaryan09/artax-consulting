@@ -106,6 +106,7 @@ export default function BusinessValuationSection() {
                                 >
                                     calculate
                                 </Button>
+                                <div id="output"></div>
                             </div>
                         </div>
                         <div className={`form-group form-group-mail ${!result ? "hidden" : ""}`}>

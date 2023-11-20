@@ -7,17 +7,20 @@ import { useGlobalContext } from "../../context";
 
 export default function BusinessPeople() {
     const { pageFade } = useGlobalContext().animations;
-    const { businessPeopleData } = useGlobalContext();
+    const { businessPeopleData,resetMetaTags } = useGlobalContext();
     const [slugs, setSlugs] = useState([]);
 
     useEffect(() => {
         if (Object.keys(businessPeopleData).length === 0) return;
-        console.log("trigger");
         setSlugs(Object.keys(businessPeopleData));
     }, [businessPeopleData]);
 
+    useEffect(() => {
+        resetMetaTags()
+    }, []);
+
     return (
-        <motion.div {...pageFade}>
+        <motion.div {...pageFade} className="full-screen-cover">
             <SmallNavbar />
             <main className="business-people-page">
                 <section className="schedule">
@@ -46,7 +49,6 @@ export default function BusinessPeople() {
                         </div>
                     </div>
                 </section>
-
             </main>
             <footer className="dark-footer"></footer>
             {/* <Footer /> */}
